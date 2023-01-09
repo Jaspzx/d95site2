@@ -5,10 +5,9 @@ dependencies:
   config:
     - field.field.node.gym_page.field_climbing_types
     - field.field.node.gym_page.field_description
-    - field.field.node.gym_page.field_gy
     - field.field.node.gym_page.field_gym_image
     - field.field.node.gym_page.field_gym_location
-    - field.field.node.gym_page.field_tag
+    - field.field.node.gym_page.field_gym_rates
     - field.field.node.gym_page.field_tel
     - field.field.node.gym_page.field_website_link
     - node.type.gym_page
@@ -37,13 +36,6 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  field_gy:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 108
-    region: content
   field_gym_image:
     type: image
     label: above
@@ -62,13 +54,12 @@ content:
     third_party_settings: {  }
     weight: 106
     region: content
-  field_tag:
-    type: entity_reference_label
+  field_gym_rates:
+    type: text_default
     label: above
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    weight: 110
+    weight: 111
     region: content
   field_tel:
     type: number_integer

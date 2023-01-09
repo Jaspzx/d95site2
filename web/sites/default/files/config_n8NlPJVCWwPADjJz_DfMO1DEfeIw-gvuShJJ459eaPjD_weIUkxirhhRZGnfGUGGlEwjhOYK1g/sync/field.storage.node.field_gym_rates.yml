@@ -1,12 +1,12 @@
-uuid: 96effb2f-f104-4691-84bb-b053b0523183
+uuid: f85a04c9-8338-4afc-9d27-deb25842082a
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_gy
-field_name: field_gy
+id: node.field_gym_rates
+field_name: field_gym_rates
 entity_type: node
 type: text_long
 settings: {  }

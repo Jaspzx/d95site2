@@ -1,0 +1,18 @@
+uuid: 2e52257d-5b5c-4eb0-acd6-e8eebb4c7abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.image
+id: node.image.title
+field_name: title
+entity_type: node
+bundle: image
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

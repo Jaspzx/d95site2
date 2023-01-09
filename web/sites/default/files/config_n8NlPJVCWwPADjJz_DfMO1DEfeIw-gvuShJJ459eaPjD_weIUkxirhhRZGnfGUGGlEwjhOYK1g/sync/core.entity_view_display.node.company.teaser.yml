@@ -1,0 +1,26 @@
+uuid: 6182deb3-ad68-4da0-be7e-61a3442be6c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company.field_company_logo
+    - field.field.node.company.field_description
+    - field.field.node.company.field_gym_outlet
+    - node.type.company
+  module:
+    - user
+id: node.company.teaser
+targetEntityType: node
+bundle: company
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_company_logo: true
+  field_description: true
+  field_gym_outlet: true

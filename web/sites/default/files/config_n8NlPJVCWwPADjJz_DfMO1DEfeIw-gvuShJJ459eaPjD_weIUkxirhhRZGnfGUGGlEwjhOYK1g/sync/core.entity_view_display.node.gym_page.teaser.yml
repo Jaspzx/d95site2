@@ -6,10 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.gym_page.field_climbing_types
     - field.field.node.gym_page.field_description
-    - field.field.node.gym_page.field_gy
     - field.field.node.gym_page.field_gym_image
     - field.field.node.gym_page.field_gym_location
-    - field.field.node.gym_page.field_tag
+    - field.field.node.gym_page.field_gym_rates
     - field.field.node.gym_page.field_tel
     - field.field.node.gym_page.field_website_link
     - node.type.gym_page
@@ -28,9 +27,8 @@ content:
 hidden:
   field_climbing_types: true
   field_description: true
-  field_gy: true
   field_gym_image: true
   field_gym_location: true
-  field_tag: true
+  field_gym_rates: true
   field_tel: true
   field_website_link: true

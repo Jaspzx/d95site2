@@ -1,89 +1,53 @@
-uuid: 4e0d0660-37a8-4fb2-b2d9-306b94105c1c
+uuid: aa9a5287-042a-49fb-a79b-a046a1d3bc7c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.gym_page.field_climbing_types
-    - field.field.node.gym_page.field_description
-    - field.field.node.gym_page.field_gym_image
-    - field.field.node.gym_page.field_gym_location
-    - field.field.node.gym_page.field_gym_rates
-    - field.field.node.gym_page.field_tel
-    - field.field.node.gym_page.field_website_link
+    - field.field.node.image.body
+    - field.field.node.image.field_image_ref
+    - field.field.node.image.field_img
     - image.style.thumbnail
-    - node.type.gym_page
+    - node.type.image
   module:
     - image
-    - link
     - path
     - text
-id: node.gym_page.default
+id: node.image.default
 targetEntityType: node
-bundle: gym_page
+bundle: image
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_climbing_types:
-    type: entity_reference_autocomplete
-    weight: 127
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_description:
-    type: text_textarea
-    weight: 122
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_gym_image:
+  field_image_ref:
     type: image_image
-    weight: 125
+    weight: 122
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_gym_location:
-    type: text_textarea
-    weight: 126
+  field_img:
+    type: image_image
+    weight: 123
     region: content
     settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_gym_rates:
-    type: text_textarea
-    weight: 131
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_tel:
-    type: number
-    weight: 129
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_website_link:
-    type: link_default
-    weight: 124
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   path:
     type: path

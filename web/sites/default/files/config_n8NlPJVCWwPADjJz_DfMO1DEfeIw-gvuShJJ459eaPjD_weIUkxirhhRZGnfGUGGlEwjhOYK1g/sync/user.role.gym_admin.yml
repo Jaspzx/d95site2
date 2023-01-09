@@ -4,22 +4,28 @@ status: true
 dependencies:
   config:
     - node.type.article
+    - node.type.company
     - node.type.gym_page
     - node.type.page
   module:
     - node
+    - toolbar
 id: gym_admin
 label: 'Gym Admin'
 weight: 4
 is_admin: null
 permissions:
+  - 'access content overview'
+  - 'access toolbar'
   - 'create article content'
+  - 'create company content'
   - 'create gym_page content'
   - 'create page content'
   - 'delete own article content'
   - 'delete own gym_page content'
   - 'delete own page content'
   - 'edit own article content'
+  - 'edit own company content'
   - 'edit own gym_page content'
   - 'edit own page content'
   - 'view own unpublished content'

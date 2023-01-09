@@ -1,29 +1,29 @@
-uuid: 7179cd4a-a9b6-494f-963a-c9601cfc9bd8
+uuid: 4dcde1f9-b11f-4077-8228-e5fc5fe9163a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tag
+    - field.storage.node.field_gym_outlet
+    - node.type.company
     - node.type.gym_page
-    - taxonomy.vocabulary.gyms
-id: node.gym_page.field_tag
-field_name: field_tag
+id: node.company.field_gym_outlet
+field_name: field_gym_outlet
 entity_type: node
-bundle: gym_page
-label: Tag
+bundle: company
+label: Gyms
 description: ''
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      gyms: gyms
+      gym_page: gym_page
     sort:
-      field: name
-      direction: asc
+      field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

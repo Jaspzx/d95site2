@@ -1,0 +1,50 @@
+uuid: 282c4ef4-00af-4223-ad42-ab33127b16b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company.field_company_logo
+    - field.field.node.company.field_description
+    - field.field.node.company.field_gym_outlet
+    - node.type.company
+  module:
+    - image
+    - text
+    - user
+id: node.company.default
+targetEntityType: node
+bundle: company
+mode: default
+content:
+  field_company_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gym_outlet:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
