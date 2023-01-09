@@ -1,0 +1,21 @@
+uuid: e1699b52-1cb2-4290-9433-1cdaea1fc33d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gy
+    - node.type.gym_page
+  module:
+    - text
+id: node.gym_page.field_gy
+field_name: field_gy
+entity_type: node
+bundle: gym_page
+label: 'Gym Rates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

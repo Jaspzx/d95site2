@@ -1,0 +1,25 @@
+uuid: 86a3502f-6323-4813-a490-b786c9476d81
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.gym_page
+    - node.type.page
+  module:
+    - node
+id: gym_admin
+label: 'Gym Admin'
+weight: 4
+is_admin: null
+permissions:
+  - 'create article content'
+  - 'create gym_page content'
+  - 'create page content'
+  - 'delete own article content'
+  - 'delete own gym_page content'
+  - 'delete own page content'
+  - 'edit own article content'
+  - 'edit own gym_page content'
+  - 'edit own page content'
+  - 'view own unpublished content'

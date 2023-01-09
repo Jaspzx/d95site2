@@ -1,0 +1,20 @@
+uuid: afe5998d-d954-40c3-9c59-38ad1628e034
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tel
+field_name: field_tel
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

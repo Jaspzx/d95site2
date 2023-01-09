@@ -1,0 +1,29 @@
+uuid: 7179cd4a-a9b6-494f-963a-c9601cfc9bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tag
+    - node.type.gym_page
+    - taxonomy.vocabulary.gyms
+id: node.gym_page.field_tag
+field_name: field_tag
+entity_type: node
+bundle: gym_page
+label: Tag
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gyms: gyms
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

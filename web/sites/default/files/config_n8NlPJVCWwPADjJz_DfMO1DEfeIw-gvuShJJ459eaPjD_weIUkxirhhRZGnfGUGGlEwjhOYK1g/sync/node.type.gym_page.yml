@@ -1,0 +1,18 @@
+uuid: 06fa09e2-80ff-476c-9399-5ee3860c4bfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Gym Page'
+type: gym_page
+description: 'Add a new Gym page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

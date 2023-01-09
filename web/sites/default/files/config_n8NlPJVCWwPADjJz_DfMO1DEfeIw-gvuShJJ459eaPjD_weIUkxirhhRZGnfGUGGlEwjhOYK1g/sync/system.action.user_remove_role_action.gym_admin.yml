@@ -1,0 +1,14 @@
+uuid: f34d800a-7c56-41a5-8cda-1ece2a25da8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.gym_admin
+  module:
+    - user
+id: user_remove_role_action.gym_admin
+label: 'Remove the Gym Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: gym_admin

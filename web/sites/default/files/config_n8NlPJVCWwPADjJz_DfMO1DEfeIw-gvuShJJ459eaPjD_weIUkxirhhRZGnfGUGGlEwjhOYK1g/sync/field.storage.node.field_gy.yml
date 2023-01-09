@@ -1,0 +1,19 @@
+uuid: 96effb2f-f104-4691-84bb-b053b0523183
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_gy
+field_name: field_gy
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

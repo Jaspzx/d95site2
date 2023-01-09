@@ -1,0 +1,23 @@
+uuid: 9439c31f-c9da-48d3-a2ef-eb4ded7c9df4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tel
+    - node.type.gym_page
+id: node.gym_page.field_tel
+field_name: field_tel
+entity_type: node
+bundle: gym_page
+label: Tel
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

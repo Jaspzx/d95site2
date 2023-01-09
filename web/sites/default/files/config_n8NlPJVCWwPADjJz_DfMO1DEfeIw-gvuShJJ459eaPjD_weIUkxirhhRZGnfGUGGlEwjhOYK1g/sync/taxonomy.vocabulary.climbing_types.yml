@@ -1,0 +1,8 @@
+uuid: 9b731de4-975e-4cf4-93f8-7d3784829390
+langcode: en
+status: true
+dependencies: {  }
+name: 'Climbing Types'
+vid: climbing_types
+description: ''
+weight: -8

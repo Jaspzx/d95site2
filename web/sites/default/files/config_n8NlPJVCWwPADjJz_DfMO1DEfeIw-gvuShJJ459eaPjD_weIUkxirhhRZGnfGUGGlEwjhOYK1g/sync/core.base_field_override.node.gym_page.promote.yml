@@ -1,0 +1,22 @@
+uuid: 89c0a910-5f3b-4eab-82e7-116130f0bcd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gym_page
+id: node.gym_page.promote
+field_name: promote
+entity_type: node
+bundle: gym_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

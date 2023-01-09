@@ -1,0 +1,33 @@
+uuid: 36f73e66-a2c6-4e16-8414-91e02de867ae
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8fb5a839-c80d-47a0-8f3e-e9dd1117836f'
+  module:
+    - block_content
+    - node
+  theme:
+    - olivero
+id: openinghours
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:8fb5a839-c80d-47a0-8f3e-e9dd1117836f'
+settings:
+  id: 'block_content:8fb5a839-c80d-47a0-8f3e-e9dd1117836f'
+  label: 'Opening Hours'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      gym_page: gym_page
