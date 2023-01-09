@@ -2,7 +2,7 @@ uuid: a6805b61-9736-494a-bcfe-b86e586b8867
 langcode: en
 status: true
 dependencies: {  }
-name: Gyms
+name: Company
 vid: gyms
-description: 'Climbing Gym Names'
+description: Company
 weight: -9
