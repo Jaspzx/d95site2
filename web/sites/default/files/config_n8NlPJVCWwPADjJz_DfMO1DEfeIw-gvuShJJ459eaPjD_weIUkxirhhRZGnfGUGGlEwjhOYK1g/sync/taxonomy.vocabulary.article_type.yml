@@ -1,0 +1,8 @@
+uuid: 59e61eb3-7d3f-4e0a-af42-4f5f0a5af104
+langcode: en
+status: true
+dependencies: {  }
+name: 'Article Type'
+vid: article_type
+description: 'The type of Article posted'
+weight: 0

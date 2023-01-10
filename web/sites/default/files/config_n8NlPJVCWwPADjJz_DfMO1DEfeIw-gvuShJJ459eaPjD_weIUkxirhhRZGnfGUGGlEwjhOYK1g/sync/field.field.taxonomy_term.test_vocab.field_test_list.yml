@@ -1,0 +1,21 @@
+uuid: 9a15d662-275d-4f4d-99fd-d1a2a2b15417
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_test_list
+    - taxonomy.vocabulary.test_vocab
+  module:
+    - options
+id: taxonomy_term.test_vocab.field_test_list
+field_name: field_test_list
+entity_type: taxonomy_term
+bundle: test_vocab
+label: 'Test List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -10,7 +10,7 @@ id: node.company.field_gym_outlet
 field_name: field_gym_outlet
 entity_type: node
 bundle: company
-label: Gyms
+label: 'Our Gyms'
 description: ''
 required: true
 translatable: false

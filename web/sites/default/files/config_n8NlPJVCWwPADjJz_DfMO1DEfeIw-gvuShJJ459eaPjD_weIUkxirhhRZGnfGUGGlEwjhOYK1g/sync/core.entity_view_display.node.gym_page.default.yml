@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.gym_page.field_climbing_types
+    - field.field.node.gym_page.field_climbing_type
     - field.field.node.gym_page.field_description
     - field.field.node.gym_page.field_gym_image
     - field.field.node.gym_page.field_gym_location
     - field.field.node.gym_page.field_gym_rates
+    - field.field.node.gym_page.field_opening_hours
     - field.field.node.gym_page.field_tel
     - field.field.node.gym_page.field_website_link
     - node.type.gym_page
   module:
-    - image
     - link
     - text
     - user
@@ -21,13 +21,13 @@ targetEntityType: node
 bundle: gym_page
 mode: default
 content:
-  field_climbing_types:
+  field_climbing_type:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 107
+    weight: 114
     region: content
   field_description:
     type: text_default
@@ -37,15 +37,13 @@ content:
     weight: 102
     region: content
   field_gym_image:
-    type: image
+    type: entity_reference_entity_view
     label: above
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 105
+    weight: 113
     region: content
   field_gym_location:
     type: text_default
@@ -60,6 +58,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 111
+    region: content
+  field_opening_hours:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
     region: content
   field_tel:
     type: number_integer

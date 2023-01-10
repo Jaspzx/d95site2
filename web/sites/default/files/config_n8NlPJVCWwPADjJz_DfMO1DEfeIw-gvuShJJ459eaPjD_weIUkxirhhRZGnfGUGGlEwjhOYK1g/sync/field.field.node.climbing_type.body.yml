@@ -1,0 +1,23 @@
+uuid: 4b364817-90b1-41e7-995a-fb3d127220e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.climbing_type
+  module:
+    - text
+id: node.climbing_type.body
+field_name: body
+entity_type: node
+bundle: climbing_type
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

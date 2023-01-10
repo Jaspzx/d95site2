@@ -1,0 +1,21 @@
+uuid: b8df19f3-e18d-4bc8-8789-28c53711cba8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opening_hours
+    - node.type.gym_page
+  module:
+    - text
+id: node.gym_page.field_opening_hours
+field_name: field_opening_hours
+entity_type: node
+bundle: gym_page
+label: 'Opening Hours'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+uuid: 9e19a4cd-401e-4013-b7c1-158c64cdce1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.test_vocab.field_test_list
+    - taxonomy.vocabulary.test_vocab
+  module:
+    - options
+    - text
+id: taxonomy_term.test_vocab.default
+targetEntityType: taxonomy_term
+bundle: test_vocab
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_test_list:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

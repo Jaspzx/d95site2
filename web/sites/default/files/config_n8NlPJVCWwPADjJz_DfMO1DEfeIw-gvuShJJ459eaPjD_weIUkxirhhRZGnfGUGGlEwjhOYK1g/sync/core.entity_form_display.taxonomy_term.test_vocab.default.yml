@@ -1,0 +1,51 @@
+uuid: 3c421468-31b5-469f-9da9-3d6ca9d6a892
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.test_vocab.field_test_list
+    - taxonomy.vocabulary.test_vocab
+  module:
+    - path
+    - text
+id: taxonomy_term.test_vocab.default
+targetEntityType: taxonomy_term
+bundle: test_vocab
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_test_list:
+    type: options_select
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

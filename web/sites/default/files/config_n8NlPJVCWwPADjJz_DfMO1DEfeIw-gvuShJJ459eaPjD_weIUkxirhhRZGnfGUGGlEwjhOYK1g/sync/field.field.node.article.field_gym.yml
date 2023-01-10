@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_gym
     - node.type.article
+    - node.type.company
     - node.type.gym_page
 id: node.article.field_gym
 field_name: field_gym
@@ -20,10 +21,11 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      company: company
       gym_page: gym_page
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: company
 field_type: entity_reference

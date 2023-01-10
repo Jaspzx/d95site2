@@ -1,0 +1,28 @@
+uuid: 5cf5c399-add1-4cf6-86d4-c3037b67058e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.climbing_type.body
+    - node.type.climbing_type
+  module:
+    - text
+    - user
+id: node.climbing_type.default
+targetEntityType: node
+bundle: climbing_type
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

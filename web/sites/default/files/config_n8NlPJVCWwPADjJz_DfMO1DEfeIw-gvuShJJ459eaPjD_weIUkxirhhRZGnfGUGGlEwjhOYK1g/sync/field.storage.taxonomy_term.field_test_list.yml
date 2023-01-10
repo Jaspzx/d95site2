@@ -1,0 +1,21 @@
+uuid: 1c1a3c0e-ff06-4fed-b770-765b1aba9386
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_test_list
+field_name: field_test_list
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

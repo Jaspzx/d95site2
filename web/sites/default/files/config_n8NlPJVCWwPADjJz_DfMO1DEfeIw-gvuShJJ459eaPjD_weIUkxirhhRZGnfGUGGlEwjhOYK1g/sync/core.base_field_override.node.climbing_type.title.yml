@@ -1,0 +1,18 @@
+uuid: 9f5f71e0-3250-4349-8bd4-69995e17f0d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.climbing_type
+id: node.climbing_type.title
+field_name: title
+entity_type: node
+bundle: climbing_type
+label: 'Climbing Type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

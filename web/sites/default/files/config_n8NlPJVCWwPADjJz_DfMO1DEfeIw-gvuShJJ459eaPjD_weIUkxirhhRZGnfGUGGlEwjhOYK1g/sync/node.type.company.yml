@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Company
+name: 'Company Page'
 type: company
-description: 'Company information.'
+description: "Use Company Page for your company's information content like Description, facilities and other information.\t\r\n"
 help: ''
 new_revision: true
 preview_mode: 1

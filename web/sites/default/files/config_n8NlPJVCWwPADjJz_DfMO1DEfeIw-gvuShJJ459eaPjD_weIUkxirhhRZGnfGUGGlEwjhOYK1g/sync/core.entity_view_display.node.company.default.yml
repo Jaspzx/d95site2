@@ -8,31 +8,98 @@ dependencies:
     - field.field.node.company.field_gym_outlet
     - node.type.company
   module:
-    - image
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          06aeb540-a6b3-47fb-96f3-d0a398466a62:
+            uuid: 06aeb540-a6b3-47fb-96f3-d0a398466a62
+            region: content
+            configuration:
+              id: 'extra_field_block:node:company:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          b2df33eb-b24b-4996-88bf-7b91e0251d6d:
+            uuid: b2df33eb-b24b-4996-88bf-7b91e0251d6d
+            region: content
+            configuration:
+              id: 'field_block:node:company:field_company_logo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          d85be13a-879b-4d84-b38e-55ddaf62a127:
+            uuid: d85be13a-879b-4d84-b38e-55ddaf62a127
+            region: content
+            configuration:
+              id: 'field_block:node:company:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          be64eac4-cc92-467a-8872-50ab76a77a01:
+            uuid: be64eac4-cc92-467a-8872-50ab76a77a01
+            region: content
+            configuration:
+              id: 'field_block:node:company:field_gym_outlet'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 id: node.company.default
 targetEntityType: node
 bundle: company
 mode: default
 content:
   field_company_logo:
-    type: image
+    type: entity_reference_entity_view
     label: above
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_gym_outlet:
     type: entity_reference_label
@@ -40,7 +107,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   links:
     settings: {  }

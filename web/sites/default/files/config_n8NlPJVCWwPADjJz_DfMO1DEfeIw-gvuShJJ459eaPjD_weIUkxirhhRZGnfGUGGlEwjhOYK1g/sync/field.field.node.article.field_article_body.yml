@@ -1,0 +1,21 @@
+uuid: 510f5ffe-f614-4099-a1c3-cfb176570f39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_body
+    - node.type.article
+  module:
+    - text
+id: node.article.field_article_body
+field_name: field_article_body
+entity_type: node
+bundle: article
+label: 'Article Body'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

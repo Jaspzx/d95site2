@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Gym Page'
 type: gym_page
-description: 'Add a new Gym page.'
+description: 'Use Gym Page for your gym''s information content like Opening Hours, Location and Rates.'
 help: ''
 new_revision: true
 preview_mode: 1

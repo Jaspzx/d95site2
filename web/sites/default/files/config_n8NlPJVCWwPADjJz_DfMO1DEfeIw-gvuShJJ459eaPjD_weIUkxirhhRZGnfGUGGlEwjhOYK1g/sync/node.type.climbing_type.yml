@@ -1,0 +1,18 @@
+uuid: 418816e4-47ea-45ae-84c6-15421eb3af03
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Climbing Type'
+type: climbing_type
+description: 'Use Climbing Type Page for your information about the various Climbing Types such as Top-Rope or Bouldering.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
