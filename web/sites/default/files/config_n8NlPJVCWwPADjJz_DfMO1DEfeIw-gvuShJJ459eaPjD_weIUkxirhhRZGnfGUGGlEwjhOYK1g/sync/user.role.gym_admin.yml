@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.article
-    - node.type.company
-    - node.type.gym_page
     - node.type.page
   module:
     - node
@@ -18,14 +16,9 @@ permissions:
   - 'access content overview'
   - 'access toolbar'
   - 'create article content'
-  - 'create company content'
-  - 'create gym_page content'
   - 'create page content'
   - 'delete own article content'
-  - 'delete own gym_page content'
   - 'delete own page content'
   - 'edit own article content'
-  - 'edit own company content'
-  - 'edit own gym_page content'
   - 'edit own page content'
   - 'view own unpublished content'

@@ -6,8 +6,14 @@ dependencies:
     - field.field.node.climbing_type.body
     - node.type.climbing_type
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.climbing_type.default
 targetEntityType: node
 bundle: climbing_type

@@ -1,0 +1,21 @@
+uuid: a3ec880c-0688-47a1-a2a4-d00f01894b83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.outlet
+  module:
+    - text
+id: node.outlet.field_description
+field_name: field_description
+entity_type: node
+bundle: outlet
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

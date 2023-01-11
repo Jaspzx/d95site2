@@ -6,8 +6,8 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_article_body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_gym
     - field.field.node.article.field_related_media
+    - field.field.node.article.field_social_media_post
     - node.type.article
   module:
     - comment
@@ -47,19 +47,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_gym:
-    type: entity_reference_autocomplete_tags
-    weight: 9
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_related_media:
     type: media_library_widget
     weight: 11
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_social_media_post:
+    type: media_library_widget
+    weight: 27
     region: content
     settings:
       media_types: {  }

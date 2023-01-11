@@ -13,6 +13,8 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity_usage: 0
@@ -32,6 +34,7 @@ module:
   menu_ui: 0
   mysql: 0
   node: 0
+  oembed_providers: 0
   options: 0
   page_cache: 0
   path: 0

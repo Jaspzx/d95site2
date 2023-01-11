@@ -1,0 +1,21 @@
+uuid: 5ed4668f-0c9f-4b39-a9c3-6e6b67e3d57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.outlet
+  module:
+    - text
+id: node.outlet.field_location
+field_name: field_location
+entity_type: node
+bundle: outlet
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

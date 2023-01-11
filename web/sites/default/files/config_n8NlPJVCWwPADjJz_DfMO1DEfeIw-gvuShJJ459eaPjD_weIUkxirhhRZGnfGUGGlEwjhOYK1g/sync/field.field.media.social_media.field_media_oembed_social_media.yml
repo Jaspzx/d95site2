@@ -1,0 +1,19 @@
+uuid: 65a3f956-4cdb-4805-a852-4a4202d393d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_social_media
+    - media.type.social_media
+id: media.social_media.field_media_oembed_social_media
+field_name: field_media_oembed_social_media
+entity_type: media
+bundle: social_media
+label: 'Social Media URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

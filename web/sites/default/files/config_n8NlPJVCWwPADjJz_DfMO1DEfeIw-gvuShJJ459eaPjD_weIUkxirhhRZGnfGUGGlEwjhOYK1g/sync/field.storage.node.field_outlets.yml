@@ -1,0 +1,19 @@
+uuid: 6c692364-4240-4bea-8ccf-bde6d48d53b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_outlets
+field_name: field_outlets
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

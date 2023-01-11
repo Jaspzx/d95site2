@@ -1,0 +1,10 @@
+uuid: 1b604487-ee48-4007-8f4f-9e5263c1cdcb
+langcode: en
+status: true
+dependencies: {  }
+id: social_media
+label: 'Social Media'
+description: ''
+providers:
+  - Facebook
+  - Instagram

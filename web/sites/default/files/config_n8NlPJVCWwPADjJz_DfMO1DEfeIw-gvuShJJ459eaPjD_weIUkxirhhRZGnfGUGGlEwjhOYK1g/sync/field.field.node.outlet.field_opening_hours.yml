@@ -1,0 +1,21 @@
+uuid: fcd11fb1-83fb-4f18-92aa-e58062b50df5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opening_hours
+    - node.type.outlet
+  module:
+    - text
+id: node.outlet.field_opening_hours
+field_name: field_opening_hours
+entity_type: node
+bundle: outlet
+label: 'Opening Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

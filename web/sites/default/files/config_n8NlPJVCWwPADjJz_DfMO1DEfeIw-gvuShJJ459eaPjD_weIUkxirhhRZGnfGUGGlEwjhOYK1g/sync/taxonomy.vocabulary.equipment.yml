@@ -1,0 +1,8 @@
+uuid: 015cf699-3942-4d79-910b-b2efadbb4bb8
+langcode: en
+status: true
+dependencies: {  }
+name: Equipment
+vid: equipment
+description: 'Climbing Equipment'
+weight: 0

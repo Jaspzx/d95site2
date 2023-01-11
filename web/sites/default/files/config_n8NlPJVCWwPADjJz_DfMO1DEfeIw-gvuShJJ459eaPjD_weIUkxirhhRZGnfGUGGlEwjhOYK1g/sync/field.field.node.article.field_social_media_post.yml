@@ -1,0 +1,29 @@
+uuid: ad1b4055-f8ee-453c-8016-2ab4d46d3685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_media_post
+    - media.type.social_media
+    - node.type.article
+id: node.article.field_social_media_post
+field_name: field_social_media_post
+entity_type: node
+bundle: article
+label: 'Social Media Post'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      social_media: social_media
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

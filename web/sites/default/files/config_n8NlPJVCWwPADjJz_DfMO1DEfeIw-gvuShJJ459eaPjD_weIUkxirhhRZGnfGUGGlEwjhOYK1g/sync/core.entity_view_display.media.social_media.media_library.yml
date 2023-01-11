@@ -1,0 +1,32 @@
+uuid: 5b81e339-51b5-40fd-8ed9-8d4a26a8d156
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.social_media.field_media_oembed_social_media
+    - image.style.medium
+    - media.type.social_media
+  module:
+    - image
+id: media.social_media.media_library
+targetEntityType: media
+bundle: social_media
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_oembed_social_media: true
+  name: true
+  uid: true

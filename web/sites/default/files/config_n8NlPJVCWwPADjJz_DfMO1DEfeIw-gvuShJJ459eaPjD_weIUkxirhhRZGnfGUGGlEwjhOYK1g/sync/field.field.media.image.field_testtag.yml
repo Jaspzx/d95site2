@@ -1,0 +1,37 @@
+uuid: c54e68ea-536e-46a3-9706-a5aa4879fe93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_testtag
+    - media.type.image
+    - node.type.article
+    - node.type.climbing_type
+    - node.type.gym
+    - node.type.outlet
+    - node.type.page
+id: media.image.field_testtag
+field_name: field_testtag
+entity_type: media
+bundle: image
+label: TestTag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+      climbing_type: climbing_type
+      gym: gym
+      outlet: outlet
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

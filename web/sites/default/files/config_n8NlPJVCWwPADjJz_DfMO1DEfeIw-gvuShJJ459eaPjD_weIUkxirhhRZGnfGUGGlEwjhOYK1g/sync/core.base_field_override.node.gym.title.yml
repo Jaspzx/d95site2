@@ -1,0 +1,18 @@
+uuid: 6691297b-9157-4c07-94b2-a6d608df5402
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gym
+id: node.gym.title
+field_name: title
+entity_type: node
+bundle: gym
+label: Gym
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

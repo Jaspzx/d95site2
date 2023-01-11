@@ -1,0 +1,23 @@
+uuid: f93f57f6-e5db-4f22-a27f-0e04d718c63b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website_link
+    - node.type.outlet
+  module:
+    - link
+id: node.outlet.field_website_link
+field_name: field_website_link
+entity_type: node
+bundle: outlet
+label: 'Website Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

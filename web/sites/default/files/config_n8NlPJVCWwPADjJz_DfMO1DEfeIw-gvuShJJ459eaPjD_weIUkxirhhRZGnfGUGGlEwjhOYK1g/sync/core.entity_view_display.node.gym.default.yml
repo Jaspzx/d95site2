@@ -1,0 +1,120 @@
+uuid: a62df72b-ee01-4739-b0cb-331c07ea16bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gym.field_description
+    - field.field.node.gym.field_logo
+    - field.field.node.gym.field_outlets
+    - node.type.gym
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          aeafda6a-1939-4345-86b7-a3f9c2764dc3:
+            uuid: aeafda6a-1939-4345-86b7-a3f9c2764dc3
+            region: content
+            configuration:
+              id: 'extra_field_block:node:gym:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          4a1da53e-0ec3-4fc2-bd9c-e83a8df8ddc8:
+            uuid: 4a1da53e-0ec3-4fc2-bd9c-e83a8df8ddc8
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_outlets'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          f64b9bc3-91e3-4cf3-9691-33c54541e07b:
+            uuid: f64b9bc3-91e3-4cf3-9691-33c54541e07b
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          6b00f281-58b0-4b10-a49e-52994e8ac55d:
+            uuid: 6b00f281-58b0-4b10-a49e-52994e8ac55d
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_logo'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: hero
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.gym.default
+targetEntityType: node
+bundle: gym
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_outlets:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 67eebe29-e6c5-49ae-ba8d-7022b8424b26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gym_rates
+    - node.type.outlet
+  module:
+    - text
+id: node.outlet.field_gym_rates
+field_name: field_gym_rates
+entity_type: node
+bundle: outlet
+label: 'Gym Rates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

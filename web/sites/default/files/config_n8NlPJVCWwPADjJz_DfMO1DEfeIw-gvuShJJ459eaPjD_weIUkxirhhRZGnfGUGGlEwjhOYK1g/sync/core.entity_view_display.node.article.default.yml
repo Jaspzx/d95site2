@@ -7,8 +7,8 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_article_body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_gym
     - field.field.node.article.field_related_media
+    - field.field.node.article.field_social_media_post
     - node.type.article
   module:
     - comment
@@ -45,14 +45,6 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  field_gym:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_related_media:
     type: entity_reference_entity_view
     label: above
@@ -61,6 +53,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_social_media_post:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
     region: content
   links:
     settings: {  }

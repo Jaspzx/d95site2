@@ -1,0 +1,21 @@
+uuid: 1d06199d-79a5-45f2-99ec-d4bab66289d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.gym
+  module:
+    - text
+id: node.gym.field_description
+field_name: field_description
+entity_type: node
+bundle: gym
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: bc0b5a31-efac-4664-9536-eb02a644bc3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_climbing_type
+    - node.type.climbing_type
+    - node.type.outlet
+id: node.outlet.field_climbing_type
+field_name: field_climbing_type
+entity_type: node
+bundle: outlet
+label: 'Climbing Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      climbing_type: climbing_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
