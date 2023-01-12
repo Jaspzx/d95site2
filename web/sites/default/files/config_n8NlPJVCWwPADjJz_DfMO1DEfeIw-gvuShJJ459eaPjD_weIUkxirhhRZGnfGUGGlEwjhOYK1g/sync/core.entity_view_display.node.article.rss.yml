@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_article_body
     - field.field.node.article.field_article_type
+    - field.field.node.article.field_gym
     - field.field.node.article.field_related_media
     - field.field.node.article.field_social_media_post
     - node.type.article
@@ -26,5 +27,6 @@ hidden:
   comment: true
   field_article_body: true
   field_article_type: true
+  field_gym: true
   field_related_media: true
   field_social_media_post: true

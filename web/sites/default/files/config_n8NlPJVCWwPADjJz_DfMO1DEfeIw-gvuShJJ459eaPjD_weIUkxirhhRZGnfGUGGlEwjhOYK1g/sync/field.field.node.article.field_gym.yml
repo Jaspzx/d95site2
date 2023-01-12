@@ -1,0 +1,31 @@
+uuid: 82e50d23-d831-4560-b321-a4f65e16cc4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gym
+    - node.type.article
+    - node.type.gym
+    - node.type.outlet
+id: node.article.field_gym
+field_name: field_gym
+entity_type: node
+bundle: article
+label: Gym
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gym: gym
+      outlet: outlet
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: gym
+field_type: entity_reference
