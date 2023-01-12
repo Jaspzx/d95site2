@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_article_body
     - node.type.article
   module:
-    - entity_usage
     - node
     - text
     - user
@@ -93,7 +92,7 @@ display:
           id: field_article_body
           table: node__field_article_body
           field: field_article_body
-          relationship: none
+          relationship: field_gym
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -219,50 +218,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_gym_target_id:
-          id: field_gym_target_id
-          table: node__field_gym
-          field: field_gym_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       style:
         type: default
       row:
@@ -276,14 +231,13 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        node_to_usage_entity:
-          id: node_to_usage_entity
-          table: node
-          field: node_to_usage_entity
+        field_gym:
+          id: field_gym
+          table: node__field_gym
+          field: field_gym
           relationship: none
           group_type: group
-          admin_label: 'Usage information (Content)'
-          entity_type: node
+          admin_label: 'field_gym: Content'
           plugin_id: standard
           required: false
       header: {  }
