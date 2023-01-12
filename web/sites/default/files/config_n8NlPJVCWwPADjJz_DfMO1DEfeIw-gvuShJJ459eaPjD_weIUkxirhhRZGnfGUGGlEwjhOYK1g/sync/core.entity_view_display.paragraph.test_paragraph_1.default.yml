@@ -1,0 +1,32 @@
+uuid: 1bdfa7fd-715e-4291-86e9-fd31171d20aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.test_paragraph_1.field_content_text
+    - field.field.paragraph.test_paragraph_1.field_image
+    - paragraphs.paragraphs_type.test_paragraph_1
+  module:
+    - text
+id: paragraph.test_paragraph_1.default
+targetEntityType: paragraph
+bundle: test_paragraph_1
+mode: default
+content:
+  field_content_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
