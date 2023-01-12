@@ -5,6 +5,11 @@ dependencies:
   config:
     - image.style.thumbnail
     - taxonomy.vocabulary.equipment
+  content:
+    - 'taxonomy_term:equipment:30e026c4-10e2-4104-8ae5-3511b6342bd0'
+    - 'taxonomy_term:equipment:8ae8ce1c-196b-49d2-adb5-78bb7f36814c'
+    - 'taxonomy_term:equipment:9dd7c508-bd04-461d-ad9f-b8a01ae79723'
+    - 'taxonomy_term:equipment:f01c29d4-971e-4d7f-ac05-bb7271d5b1d3'
   module:
     - image
     - media
@@ -852,7 +857,11 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            - 17
+            - 18
+            - 16
+            - 15
           group: 1
           exposed: true
           expose:
