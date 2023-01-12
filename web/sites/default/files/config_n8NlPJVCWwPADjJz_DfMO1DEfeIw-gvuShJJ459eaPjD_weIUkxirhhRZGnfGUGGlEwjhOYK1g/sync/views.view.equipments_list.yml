@@ -2,6 +2,9 @@ uuid: 6f7e6e45-f042-4c09-b478-f306337e658b
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_equipments
+    - taxonomy.vocabulary.equipment
   module:
     - node
     - taxonomy
@@ -20,12 +23,12 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Equipments List'
+      title: 'Gear Required'
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_equipments:
+          id: field_equipments
+          table: node__field_equipments
+          field: field_equipments
           relationship: none
           group_type: group
           admin_label: ''
@@ -63,7 +66,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -71,18 +74,18 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: true
-          group_column: value
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
       pager:
@@ -140,6 +143,51 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
+        field_equipments_target_id:
+          id: field_equipments_target_id
+          table: node__field_equipments
+          field: field_equipments_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: 'not empty'
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: equipment
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: default
       row:
@@ -153,8 +201,8 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        field_equipments:
-          id: field_equipments
+        field_equipments_1:
+          id: field_equipments_1
           table: node__field_equipments
           field: field_equipments
           relationship: none
@@ -170,9 +218,11 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_equipments'
   block_1:
     id: block_1
     display_title: Block
@@ -185,6 +235,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_equipments'
