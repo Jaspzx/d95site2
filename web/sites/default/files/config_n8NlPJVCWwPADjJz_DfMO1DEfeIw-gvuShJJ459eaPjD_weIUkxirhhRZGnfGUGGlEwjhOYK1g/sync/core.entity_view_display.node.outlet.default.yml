@@ -50,43 +50,37 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          a1b02a85-00e7-434a-8439-c3d1c771598b:
-            uuid: a1b02a85-00e7-434a-8439-c3d1c771598b
-            region: content
-            configuration:
-              id: 'field_block:node:outlet:field_equipments'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
         third_party_settings: {  }
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_section
         layout_settings:
-          label: ''
+          label: Main-7525
+          context_mapping: {  }
+          column_widths: 75-25
         components:
-          81664cbd-5f04-4013-8952-23e517eba55b:
-            uuid: 81664cbd-5f04-4013-8952-23e517eba55b
-            region: content
-            configuration:
-              id: 'extra_field_block:node:outlet:links'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 0
-            additional: {  }
-          b763c0cf-576a-4277-8535-7c2d44d72afb:
-            uuid: b763c0cf-576a-4277-8535-7c2d44d72afb
-            region: content
+          f9c7e55f-09e2-45ad-a36b-2665e9e0162a:
+            uuid: f9c7e55f-09e2-45ad-a36b-2665e9e0162a
+            region: first
             configuration:
               id: 'field_block:node:outlet:field_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          fa1a88b0-ee69-44b5-bd9e-767e2faa4e1d:
+            uuid: fa1a88b0-ee69-44b5-bd9e-767e2faa4e1d
+            region: first
+            configuration:
+              id: 'field_block:node:outlet:field_location'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -95,42 +89,11 @@ third_party_settings:
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          5944696a-de8d-4657-ae2a-946a39b2cf5c:
-            uuid: 5944696a-de8d-4657-ae2a-946a39b2cf5c
-            region: content
-            configuration:
-              id: 'field_block:node:outlet:field_gym_rates'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          d327b738-e8ca-4b8d-8c5b-226348926602:
-            uuid: d327b738-e8ca-4b8d-8c5b-226348926602
-            region: content
-            configuration:
-              id: 'field_block:node:outlet:field_climbing_type'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 3
+            weight: 4
             additional: {  }
           b1c6ae89-75f6-4902-817c-89b944f94653:
             uuid: b1c6ae89-75f6-4902-817c-89b944f94653
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:outlet:field_tel'
               label_display: '0'
@@ -143,13 +106,29 @@ third_party_settings:
                   thousand_separator: ''
                   prefix_suffix: true
                 third_party_settings: {  }
-            weight: 4
+            weight: 5
             additional: {  }
-          fa1a88b0-ee69-44b5-bd9e-767e2faa4e1d:
-            uuid: fa1a88b0-ee69-44b5-bd9e-767e2faa4e1d
-            region: content
+          d327b738-e8ca-4b8d-8c5b-226348926602:
+            uuid: d327b738-e8ca-4b8d-8c5b-226348926602
+            region: first
             configuration:
-              id: 'field_block:node:outlet:field_location'
+              id: 'field_block:node:outlet:field_climbing_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          5944696a-de8d-4657-ae2a-946a39b2cf5c:
+            uuid: 5944696a-de8d-4657-ae2a-946a39b2cf5c
+            region: first
+            configuration:
+              id: 'field_block:node:outlet:field_gym_rates'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -158,11 +137,11 @@ third_party_settings:
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            weight: 5
+            weight: 2
             additional: {  }
           16905525-de96-469f-8597-64f57711c708:
             uuid: 16905525-de96-469f-8597-64f57711c708
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:outlet:field_opening_hours'
               label_display: '0'
@@ -173,11 +152,11 @@ third_party_settings:
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            weight: 6
+            weight: 3
             additional: {  }
           5e88f3be-48e0-41a1-901c-8d4c8d7cbd08:
             uuid: 5e88f3be-48e0-41a1-901c-8d4c8d7cbd08
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:outlet:field_website_link'
               label_display: '0'
@@ -193,8 +172,14 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-            weight: 7
+            weight: 6
             additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
           d43bd8a4-7f83-4f53-b0c8-a8f6a390c6b9:
             uuid: d43bd8a4-7f83-4f53-b0c8-a8f6a390c6b9
             region: content
@@ -210,7 +195,17 @@ third_party_settings:
                   view_mode: default
                   link: false
                 third_party_settings: {  }
-            weight: 8
+            weight: 6
+            additional: {  }
+          81664cbd-5f04-4013-8952-23e517eba55b:
+            uuid: 81664cbd-5f04-4013-8952-23e517eba55b
+            region: content
+            configuration:
+              id: 'extra_field_block:node:outlet:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
             additional: {  }
         third_party_settings: {  }
 id: node.outlet.default
