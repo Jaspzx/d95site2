@@ -5,11 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_equipments
     - taxonomy.vocabulary.equipment
-  content:
-    - 'taxonomy_term:equipment:30e026c4-10e2-4104-8ae5-3511b6342bd0'
-    - 'taxonomy_term:equipment:8ae8ce1c-196b-49d2-adb5-78bb7f36814c'
-    - 'taxonomy_term:equipment:9dd7c508-bd04-461d-ad9f-b8a01ae79723'
-    - 'taxonomy_term:equipment:f01c29d4-971e-4d7f-ac05-bb7271d5b1d3'
   module:
     - node
     - taxonomy
@@ -156,32 +151,24 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            - 17
-            - 16
-            - 18
-            - 15
+          operator: 'not empty'
+          value: {  }
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_equipments_target_id_op
-            label: 'Equipments (field_equipments)'
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_equipments_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_equipments_target_id
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              gym_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -213,7 +200,16 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_equipments_1:
+          id: field_equipments_1
+          table: node__field_equipments
+          field: field_equipments
+          relationship: none
+          group_type: group
+          admin_label: 'field_equipments: Taxonomy term'
+          plugin_id: standard
+          required: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -222,7 +218,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -240,7 +235,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - user
         - 'user.node_grants:view'
         - user.permissions
