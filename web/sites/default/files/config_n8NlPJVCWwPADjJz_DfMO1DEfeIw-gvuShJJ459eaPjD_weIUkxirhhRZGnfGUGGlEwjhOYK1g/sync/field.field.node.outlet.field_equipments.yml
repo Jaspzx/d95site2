@@ -1,0 +1,33 @@
+uuid: 11eb50a4-2630-4564-87a3-b68e94557944
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equipments
+    - node.type.outlet
+    - taxonomy.vocabulary.equipment
+  content:
+    - 'taxonomy_term:equipment:9dd7c508-bd04-461d-ad9f-b8a01ae79723'
+id: node.outlet.field_equipments
+field_name: field_equipments
+entity_type: node
+bundle: outlet
+label: Equipments
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 9dd7c508-bd04-461d-ad9f-b8a01ae79723
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      equipment: equipment
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

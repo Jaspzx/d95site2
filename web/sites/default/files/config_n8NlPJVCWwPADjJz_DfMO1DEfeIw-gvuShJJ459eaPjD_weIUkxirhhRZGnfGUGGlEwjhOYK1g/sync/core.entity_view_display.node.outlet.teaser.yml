@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.outlet.field_climbing_type
     - field.field.node.outlet.field_description
+    - field.field.node.outlet.field_equipments
     - field.field.node.outlet.field_gym_images
     - field.field.node.outlet.field_gym_rates
     - field.field.node.outlet.field_location
@@ -29,6 +30,7 @@ content:
 hidden:
   field_climbing_type: true
   field_description: true
+  field_equipments: true
   field_gym_images: true
   field_gym_rates: true
   field_location: true

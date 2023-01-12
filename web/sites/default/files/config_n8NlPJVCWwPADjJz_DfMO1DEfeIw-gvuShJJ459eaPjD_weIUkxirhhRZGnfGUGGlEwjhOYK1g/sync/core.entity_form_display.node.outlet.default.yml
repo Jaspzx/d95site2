@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.outlet.field_climbing_type
     - field.field.node.outlet.field_description
+    - field.field.node.outlet.field_equipments
     - field.field.node.outlet.field_gym_images
     - field.field.node.outlet.field_gym_rates
     - field.field.node.outlet.field_location
@@ -45,6 +46,16 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_equipments:
+    type: entity_reference_autocomplete
+    weight: 130
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_gym_images:
