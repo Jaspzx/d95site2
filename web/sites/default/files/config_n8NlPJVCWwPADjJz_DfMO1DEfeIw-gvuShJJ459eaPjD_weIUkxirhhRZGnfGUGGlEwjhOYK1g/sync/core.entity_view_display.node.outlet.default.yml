@@ -14,12 +14,14 @@ dependencies:
     - field.field.node.outlet.field_website_link
     - field.field.node.outlet.layout_builder__layout
     - node.type.outlet
+    - views.view.equipments_list
   module:
     - layout_builder
     - layout_discovery
     - link
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -173,6 +175,19 @@ third_party_settings:
                   target: ''
                 third_party_settings: {  }
             weight: 6
+            additional: {  }
+          4d38c45e-4cf7-4331-943e-25d1de710045:
+            uuid: 4d38c45e-4cf7-4331-943e-25d1de710045
+            region: second
+            configuration:
+              id: 'views_block:equipments_list-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
             additional: {  }
         third_party_settings: {  }
       -
