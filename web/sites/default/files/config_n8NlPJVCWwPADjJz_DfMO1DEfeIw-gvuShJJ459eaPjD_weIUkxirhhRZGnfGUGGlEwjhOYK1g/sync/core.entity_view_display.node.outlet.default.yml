@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.outlet.layout_builder__layout
     - node.type.outlet
     - views.view.equipments_list
-    - views.view.latest_articles
   module:
     - layout_builder
     - layout_discovery
@@ -189,19 +188,6 @@ third_party_settings:
               views_label: ''
               items_per_page: none
             weight: 0
-            additional: {  }
-          0843a508-38e2-4a7a-a543-c42fce28dd03:
-            uuid: 0843a508-38e2-4a7a-a543-c42fce28dd03
-            region: second
-            configuration:
-              id: 'views_block:latest_articles-block_1'
-              label: ''
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
