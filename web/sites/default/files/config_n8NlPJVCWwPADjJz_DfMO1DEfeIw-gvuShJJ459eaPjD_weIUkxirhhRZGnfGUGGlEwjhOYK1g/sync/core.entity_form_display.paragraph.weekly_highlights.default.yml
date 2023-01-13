@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.weekly_highlights.field_article
     - field.field.paragraph.weekly_highlights.field_posted_by
     - paragraphs.paragraphs_type.weekly_highlights
 id: paragraph.weekly_highlights.default
@@ -10,6 +11,16 @@ targetEntityType: paragraph
 bundle: weekly_highlights
 mode: default
 content:
+  field_article:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_posted_by:
     type: entity_reference_autocomplete
     weight: 0
