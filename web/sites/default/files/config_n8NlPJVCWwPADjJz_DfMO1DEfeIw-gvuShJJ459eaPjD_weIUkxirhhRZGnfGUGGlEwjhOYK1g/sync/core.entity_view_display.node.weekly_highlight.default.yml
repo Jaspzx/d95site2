@@ -3,14 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.weekly_highlight.field_section
     - node.type.weekly_highlight
   module:
+    - entity_reference_revisions
     - user
 id: node.weekly_highlight.default
 targetEntityType: node
 bundle: weekly_highlight
 mode: default
 content:
+  field_section:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
