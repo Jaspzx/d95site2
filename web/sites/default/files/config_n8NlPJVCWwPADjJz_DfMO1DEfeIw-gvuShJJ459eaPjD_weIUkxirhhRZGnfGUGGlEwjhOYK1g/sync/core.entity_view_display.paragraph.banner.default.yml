@@ -5,6 +5,39 @@ dependencies:
   config:
     - field.field.paragraph.banner.field_banner_image
     - paragraphs.paragraphs_type.banner
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          d38b0f37-8325-4916-ae80-877d3695be8d:
+            uuid: d38b0f37-8325-4916-ae80-877d3695be8d
+            region: content
+            configuration:
+              id: 'field_block:paragraph:banner:field_banner_image'
+              label: 'Banner Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: hero
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner

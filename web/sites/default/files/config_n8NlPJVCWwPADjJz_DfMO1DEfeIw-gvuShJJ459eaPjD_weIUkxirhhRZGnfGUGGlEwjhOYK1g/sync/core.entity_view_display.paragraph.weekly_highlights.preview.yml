@@ -1,0 +1,38 @@
+uuid: 7b41351a-7177-448e-9e84-2c4ba394328d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.weekly_highlights.field_article
+    - field.field.paragraph.weekly_highlights.field_posted_by
+    - paragraphs.paragraphs_type.weekly_highlights
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.weekly_highlights.preview
+targetEntityType: paragraph
+bundle: weekly_highlights
+mode: preview
+content:
+  field_article:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_posted_by:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
