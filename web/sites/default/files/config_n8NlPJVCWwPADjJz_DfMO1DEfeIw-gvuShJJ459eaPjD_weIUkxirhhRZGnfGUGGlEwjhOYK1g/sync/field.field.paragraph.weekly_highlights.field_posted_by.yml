@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_posted_by
     - node.type.gym
-    - node.type.outlet
     - paragraphs.paragraphs_type.weekly_highlights
 id: paragraph.weekly_highlights.field_posted_by
 field_name: field_posted_by
@@ -22,7 +21,6 @@ settings:
   handler_settings:
     target_bundles:
       gym: gym
-      outlet: outlet
     sort:
       field: _none
       direction: ASC
