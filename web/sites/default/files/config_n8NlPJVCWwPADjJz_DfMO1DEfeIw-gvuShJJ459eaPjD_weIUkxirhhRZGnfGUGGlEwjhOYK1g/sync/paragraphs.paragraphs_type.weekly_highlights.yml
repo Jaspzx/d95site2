@@ -1,0 +1,10 @@
+uuid: 4ec27f7f-f24f-4927-8e39-9db4f068045b
+langcode: en
+status: true
+dependencies: {  }
+id: weekly_highlights
+label: 'Weekly Highlights'
+icon_uuid: null
+icon_default: null
+description: "Weekly highlights Paragraph:\r\n- Showcase the latest post and articles in the climbing scene."
+behavior_plugins: {  }
