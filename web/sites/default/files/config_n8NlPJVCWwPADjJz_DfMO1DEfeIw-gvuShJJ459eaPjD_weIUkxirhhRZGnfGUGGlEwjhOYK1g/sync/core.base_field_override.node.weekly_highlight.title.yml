@@ -1,0 +1,18 @@
+uuid: e4ae9d19-f00b-49aa-b55c-af20b55b8234
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.weekly_highlight
+id: node.weekly_highlight.title
+field_name: title
+entity_type: node
+bundle: weekly_highlight
+label: 'Title for Weekly Highlight'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

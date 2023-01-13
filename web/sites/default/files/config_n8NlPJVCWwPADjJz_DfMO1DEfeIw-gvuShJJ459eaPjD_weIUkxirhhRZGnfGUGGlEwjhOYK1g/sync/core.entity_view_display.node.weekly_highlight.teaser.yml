@@ -1,0 +1,30 @@
+uuid: 2ee9a842-3929-4e11-b567-e57f00921487
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.weekly_highlight.body
+    - node.type.weekly_highlight
+  module:
+    - text
+    - user
+id: node.weekly_highlight.teaser
+targetEntityType: node
+bundle: weekly_highlight
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
