@@ -3,23 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.weekly_highlight.body
     - node.type.weekly_highlight
   module:
-    - text
     - user
 id: node.weekly_highlight.default
 targetEntityType: node
 bundle: weekly_highlight
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
