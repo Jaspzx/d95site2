@@ -7,7 +7,46 @@ dependencies:
     - node.type.weekly_highlight
   module:
     - entity_reference_revisions
+    - layout_builder
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          203f62ae-4895-41de-8fd0-5f5cc0f290c3:
+            uuid: 203f62ae-4895-41de-8fd0-5f5cc0f290c3
+            region: content
+            configuration:
+              id: 'extra_field_block:node:weekly_highlight:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          71cbeffc-56d9-41b5-93d8-4cfccb77f6ec:
+            uuid: 71cbeffc-56d9-41b5-93d8-4cfccb77f6ec
+            region: content
+            configuration:
+              id: 'field_block:node:weekly_highlight:field_section'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: preview
+                  link: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: node.weekly_highlight.default
 targetEntityType: node
 bundle: weekly_highlight
