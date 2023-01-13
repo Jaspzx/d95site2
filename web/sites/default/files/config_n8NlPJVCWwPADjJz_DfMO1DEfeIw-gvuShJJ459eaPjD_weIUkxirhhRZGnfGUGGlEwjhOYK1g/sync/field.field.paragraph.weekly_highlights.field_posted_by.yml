@@ -1,0 +1,31 @@
+uuid: 15b433f2-3671-46ea-87db-a5c63f7cc1fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_posted_by
+    - node.type.gym
+    - node.type.outlet
+    - paragraphs.paragraphs_type.weekly_highlights
+id: paragraph.weekly_highlights.field_posted_by
+field_name: field_posted_by
+entity_type: paragraph
+bundle: weekly_highlights
+label: 'Posted By'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gym: gym
+      outlet: outlet
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: gym
+field_type: entity_reference

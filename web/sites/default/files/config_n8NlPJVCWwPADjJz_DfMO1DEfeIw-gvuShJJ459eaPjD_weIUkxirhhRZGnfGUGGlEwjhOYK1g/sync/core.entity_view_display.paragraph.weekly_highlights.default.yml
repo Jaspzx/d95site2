@@ -1,0 +1,21 @@
+uuid: b1a9cbeb-ca05-4855-adb0-385f2a9b1efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.weekly_highlights.field_posted_by
+    - paragraphs.paragraphs_type.weekly_highlights
+id: paragraph.weekly_highlights.default
+targetEntityType: paragraph
+bundle: weekly_highlights
+mode: default
+content:
+  field_posted_by:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
