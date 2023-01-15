@@ -29,6 +29,12 @@ settings:
       container:
         weight: 4
         enabled: false
+      from_library:
+        weight: 9
+        enabled: false
+      layoutpara:
+        weight: 6
+        enabled: false
       weekly_highlights:
         weight: 6
         enabled: false
