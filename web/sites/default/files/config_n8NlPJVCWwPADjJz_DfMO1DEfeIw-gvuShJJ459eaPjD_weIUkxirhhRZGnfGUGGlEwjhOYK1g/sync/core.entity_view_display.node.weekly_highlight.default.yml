@@ -15,7 +15,7 @@ dependencies:
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -49,22 +49,31 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          15201114-df0a-4cac-8e96-97e7037913e4:
-            uuid: 15201114-df0a-4cac-8e96-97e7037913e4
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Container Section'
+          context_mapping: {  }
+        components:
+          ac8c1152-4156-4110-b466-c3637790824f:
+            uuid: ac8c1152-4156-4110-b466-c3637790824f
             region: content
             configuration:
               id: 'field_block:node:weekly_highlight:field_container'
+              label: Container
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: above
                 settings:
                   view_mode: default
-                  link: ''
                 third_party_settings: {  }
-            weight: 2
+            weight: 0
             additional: {  }
         third_party_settings: {  }
 id: node.weekly_highlight.default
@@ -72,15 +81,6 @@ targetEntityType: node
 bundle: weekly_highlight
 mode: default
 content:
-  field_container:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 102
-    region: content
   field_section:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -96,4 +96,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_container: true
   layout_builder__layout: true
