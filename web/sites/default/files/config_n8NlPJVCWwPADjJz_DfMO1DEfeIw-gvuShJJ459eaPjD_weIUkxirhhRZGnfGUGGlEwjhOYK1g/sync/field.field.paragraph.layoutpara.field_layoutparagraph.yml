@@ -1,0 +1,50 @@
+uuid: 6d8a4285-ea90-4853-83a8-646cc14ba316
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layoutparagraph
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.layoutpara
+    - paragraphs.paragraphs_type.weekly_highlights
+  module:
+    - entity_reference_revisions
+id: paragraph.layoutpara.field_layoutparagraph
+field_name: field_layoutparagraph
+entity_type: paragraph
+bundle: layoutpara
+label: LayoutParagraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      layoutpara: layoutpara
+      banner: banner
+      container: container
+      from_library: from_library
+      weekly_highlights: weekly_highlights
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 7
+        enabled: true
+      container:
+        weight: 8
+        enabled: true
+      from_library:
+        weight: 9
+        enabled: true
+      layoutpara:
+        weight: 6
+        enabled: true
+      weekly_highlights:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions
