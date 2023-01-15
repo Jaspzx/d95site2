@@ -1,0 +1,35 @@
+uuid: 9f5cc896-fc48-4b38-86ce-8454675aec0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_paragraph
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: paragraph.container.field_reference_paragraph
+field_name: field_reference_paragraph
+entity_type: paragraph
+bundle: container
+label: 'Reference Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 5
+        enabled: false
+      container:
+        weight: 4
+        enabled: false
+      weekly_highlights:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

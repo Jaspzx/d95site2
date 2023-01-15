@@ -3,18 +3,54 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.container.field_reference_paragraph
     - field.field.paragraph.container.layout_builder__layout
     - paragraphs.paragraphs_type.container
   module:
+    - entity_reference_revisions
     - layout_builder
+    - layout_discovery
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          38571a83-7555-4e5c-bd43-cb852d07dea4:
+            uuid: 38571a83-7555-4e5c-bd43-cb852d07dea4
+            region: content
+            configuration:
+              id: 'field_block:paragraph:container:field_reference_paragraph'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: paragraph.container.default
 targetEntityType: paragraph
 bundle: container
 mode: default
-content: {  }
+content:
+  field_reference_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   layout_builder__layout: true
