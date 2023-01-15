@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_section
     - node.type.weekly_highlight
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.weekly_highlights
   module:
     - entity_reference_revisions
 id: node.weekly_highlight.field_section
@@ -22,15 +20,16 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      banner: banner
-      weekly_highlights: weekly_highlights
+    target_bundles: null
     negate: 0
     target_bundles_drag_drop:
       banner:
         weight: 3
-        enabled: true
+        enabled: false
+      container:
+        weight: 4
+        enabled: false
       weekly_highlights:
         weight: 4
-        enabled: true
+        enabled: false
 field_type: entity_reference_revisions
