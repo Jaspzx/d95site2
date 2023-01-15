@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_layoutp
     - node.type.weekly_highlight
     - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.container
     - paragraphs.paragraphs_type.layoutpara
     - paragraphs.paragraphs_type.weekly_highlights
   module:
@@ -26,6 +27,7 @@ settings:
     target_bundles:
       layoutpara: layoutpara
       banner: banner
+      container: container
       weekly_highlights: weekly_highlights
     negate: 0
     target_bundles_drag_drop:
@@ -34,7 +36,7 @@ settings:
         enabled: true
       container:
         weight: 8
-        enabled: false
+        enabled: true
       from_library:
         weight: 9
         enabled: false
