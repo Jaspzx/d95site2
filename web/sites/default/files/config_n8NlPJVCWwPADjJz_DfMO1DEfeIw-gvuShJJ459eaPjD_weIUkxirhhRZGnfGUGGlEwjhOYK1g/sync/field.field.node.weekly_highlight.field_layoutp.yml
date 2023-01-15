@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.storage.node.field_layoutp
     - node.type.weekly_highlight
+    - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.layoutpara
+    - paragraphs.paragraphs_type.weekly_highlights
   module:
     - entity_reference_revisions
 id: node.weekly_highlight.field_layoutp
@@ -23,11 +25,13 @@ settings:
   handler_settings:
     target_bundles:
       layoutpara: layoutpara
+      banner: banner
+      weekly_highlights: weekly_highlights
     negate: 0
     target_bundles_drag_drop:
       banner:
         weight: 7
-        enabled: false
+        enabled: true
       container:
         weight: 8
         enabled: false
@@ -39,5 +43,5 @@ settings:
         enabled: true
       weekly_highlights:
         weight: 10
-        enabled: false
+        enabled: true
 field_type: entity_reference_revisions
