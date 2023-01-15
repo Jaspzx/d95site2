@@ -1,0 +1,21 @@
+uuid: 4bd21c14-306f-4f65-8fd5-056bf0a3ad78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.weekly_highlight
+  module:
+    - layout_builder
+id: node.weekly_highlight.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: weekly_highlight
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

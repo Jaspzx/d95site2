@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.weekly_highlight.field_container
     - field.field.node.weekly_highlight.field_section
+    - field.field.node.weekly_highlight.layout_builder__layout
     - node.type.weekly_highlight
   module:
     - paragraphs
@@ -101,4 +102,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true
