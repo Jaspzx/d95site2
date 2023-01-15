@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.weekly_highlight.field_container
     - field.field.node.weekly_highlight.field_section
     - node.type.weekly_highlight
   module:
@@ -19,4 +20,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_container: true
   field_section: true

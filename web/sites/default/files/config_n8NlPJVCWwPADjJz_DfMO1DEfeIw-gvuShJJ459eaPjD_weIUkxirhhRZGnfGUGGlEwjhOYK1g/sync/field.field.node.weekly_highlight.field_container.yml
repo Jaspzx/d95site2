@@ -1,0 +1,37 @@
+uuid: 5a673a10-c660-4083-a034-b3794b5695fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_container
+    - node.type.weekly_highlight
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: node.weekly_highlight.field_container
+field_name: field_container
+entity_type: node
+bundle: weekly_highlight
+label: Container
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      container: container
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 5
+        enabled: false
+      container:
+        weight: 4
+        enabled: true
+      weekly_highlights:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions
