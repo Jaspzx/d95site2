@@ -29,6 +29,9 @@ module:
   image: 0
   layout_builder: 0
   layout_discovery: 0
+  layout_paragraphs: 0
+  layout_paragraphs_library: 0
+  layout_paragraphs_permissions: 0
   link: 0
   media: 0
   media_library: 0
