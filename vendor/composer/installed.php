@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '28d59a532432b42f0af1d2a0fd49f5cb0acd52a2',
+        'reference' => '885a8929fb6dd390fe45ced926862fb7e78e5005',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -412,6 +412,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/layout_paragraphs' => array(
+            'pretty_version' => '2.0.2',
+            'version' => '2.0.2.0',
+            'reference' => '2.0.2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/layout_paragraphs',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/oembed_providers' => array(
             'pretty_version' => '2.1.0',
             'version' => '2.1.0.0',
@@ -433,7 +442,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '28d59a532432b42f0af1d2a0fd49f5cb0acd52a2',
+            'reference' => '885a8929fb6dd390fe45ced926862fb7e78e5005',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
