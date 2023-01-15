@@ -5,7 +5,55 @@ dependencies:
   config:
     - field.field.paragraph.weekly_highlights.field_article
     - field.field.paragraph.weekly_highlights.field_posted_by
+    - field.field.paragraph.weekly_highlights.layout_builder__layout
     - paragraphs.paragraphs_type.weekly_highlights
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e961ccc1-8a64-45e5-992b-eb2ed230fce5:
+            uuid: e961ccc1-8a64-45e5-992b-eb2ed230fce5
+            region: content
+            configuration:
+              id: 'field_block:paragraph:weekly_highlights:field_posted_by'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          34e14ab4-7200-4cff-ad6d-ff4dd28ea023:
+            uuid: 34e14ab4-7200-4cff-ad6d-ff4dd28ea023
+            region: content
+            configuration:
+              id: 'field_block:paragraph:weekly_highlights:field_article'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: teaser
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: paragraph.weekly_highlights.default
 targetEntityType: paragraph
 bundle: weekly_highlights
@@ -28,4 +76,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  layout_builder__layout: true
