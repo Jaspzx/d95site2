@@ -3,7 +3,7 @@ type: theme
 description: 'A great theme for the eye.'
 core: 8.x
 base theme: classy
-core_version_requirement: ^8 || ^9
+# core_version_requirement: ^8 || ^9
 
 # Regions
 regions:
