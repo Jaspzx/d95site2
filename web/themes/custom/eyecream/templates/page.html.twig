@@ -48,35 +48,35 @@
     {{ page.header }}
   </header>
 
+  {% if page.banner_top %}
+    <div class="layout-banner-top" role="banner">
+      {{ page.banner_top }}
+    </div>
+  {% endif%}
+
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
+  <!-- {{page.content}}
+  {{page.content_bottom}}
+  {{page.page_top}}
+  {{page.page_bottom}} -->
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+      {{ page.content_bottom }}
+    </div>
+    <!-- {# /.layout-content #} -->
 
   </main>
+
+  {% if page.banner_bottom %}
+    <div class="layout-banner-bottom" role="banner">
+      {{ page.banner_bottom }}
+    </div>
+  {% endif%}
 
   {% if page.footer %}
     <footer role="contentinfo">
