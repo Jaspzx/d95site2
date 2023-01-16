@@ -1,6 +1,6 @@
 uuid: 54f2a478-4fe7-429f-8b64-57ebe7e2c039
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - eyecream
@@ -8,7 +8,7 @@ _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: eyecream_page_title
 theme: eyecream
-region: sidebar_first
+region: header
 weight: -5
 provider: null
 plugin: page_title_block

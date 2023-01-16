@@ -1,6 +1,6 @@
 uuid: 14e04838-c8a4-4f3a-8325-70255e6e5cd2
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
 id: eyecream_content
 theme: eyecream
-region: content
+region: header
 weight: 0
 provider: null
 plugin: system_main_block
