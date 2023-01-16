@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.weekly_highlight.field_container
-    - field.field.node.weekly_highlight.field_layoutp
+    - field.field.node.weekly_highlight.field_layout_editor_paragraphs
     - field.field.node.weekly_highlight.field_section
     - field.field.node.weekly_highlight.layout_builder__layout
     - node.type.weekly_highlight
@@ -41,7 +41,7 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_layoutp:
+  field_layout_editor_paragraphs:
     type: layout_paragraphs
     weight: 123
     region: content

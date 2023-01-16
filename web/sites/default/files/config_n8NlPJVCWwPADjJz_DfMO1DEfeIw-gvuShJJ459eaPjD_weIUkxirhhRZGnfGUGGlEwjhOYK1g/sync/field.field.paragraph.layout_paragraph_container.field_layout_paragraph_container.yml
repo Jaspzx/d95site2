@@ -1,0 +1,44 @@
+uuid: 18e8aea0-33d6-45af-85d0-32b0db8c2b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout_paragraph_container
+    - paragraphs.paragraphs_type.layout_paragraph_container
+  module:
+    - entity_reference_revisions
+id: paragraph.layout_paragraph_container.field_layout_paragraph_container
+field_name: field_layout_paragraph_container
+entity_type: paragraph
+bundle: layout_paragraph_container
+label: 'Layout Paragraph Container'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 8
+        enabled: false
+      container:
+        weight: 9
+        enabled: false
+      from_library:
+        weight: 10
+        enabled: false
+      layout_paragraph_container:
+        weight: 7
+        enabled: false
+      layoutpara:
+        weight: 11
+        enabled: false
+      weekly_highlights:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,4 +1,4 @@
-uuid: a21d8601-0324-469f-abc9-0f3e53664461
+uuid: 4d8672eb-d7d9-4083-bb74-55edf97fd9cd
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_layoutp
-field_name: field_layoutp
+id: node.field_layout_editor_paragraphs
+field_name: field_layout_editor_paragraphs
 entity_type: node
 type: entity_reference_revisions
 settings:

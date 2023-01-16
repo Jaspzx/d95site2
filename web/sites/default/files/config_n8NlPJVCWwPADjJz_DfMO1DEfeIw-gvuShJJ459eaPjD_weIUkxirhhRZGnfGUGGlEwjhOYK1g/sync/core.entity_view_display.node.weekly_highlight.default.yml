@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.weekly_highlight.field_container
-    - field.field.node.weekly_highlight.field_layoutp
+    - field.field.node.weekly_highlight.field_layout_editor_paragraphs
     - field.field.node.weekly_highlight.field_section
     - field.field.node.weekly_highlight.layout_builder__layout
     - node.type.weekly_highlight
@@ -50,12 +50,38 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
+          672f2be8-cf23-49b5-8a76-6e3c3c26ae55:
+            uuid: 672f2be8-cf23-49b5-8a76-6e3c3c26ae55
+            region: content
+            configuration:
+              id: 'field_block:node:weekly_highlight:field_layout_editor_paragraphs'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
 id: node.weekly_highlight.default
 targetEntityType: node
 bundle: weekly_highlight
 mode: default
 content:
+  field_layout_editor_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
   field_section:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -72,5 +98,4 @@ content:
     region: content
 hidden:
   field_container: true
-  field_layoutp: true
   layout_builder__layout: true

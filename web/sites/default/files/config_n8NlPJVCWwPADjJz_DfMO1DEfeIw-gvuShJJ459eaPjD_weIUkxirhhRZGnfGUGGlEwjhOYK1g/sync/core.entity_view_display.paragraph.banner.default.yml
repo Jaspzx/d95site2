@@ -17,10 +17,11 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Hero Banner'
+          context_mapping: {  }
         components:
-          d38b0f37-8325-4916-ae80-877d3695be8d:
-            uuid: d38b0f37-8325-4916-ae80-877d3695be8d
+          248cbe17-d774-413d-a901-8d3e649128c5:
+            uuid: 248cbe17-d774-413d-a901-8d3e649128c5
             region: content
             configuration:
               id: 'field_block:paragraph:banner:field_banner_image'

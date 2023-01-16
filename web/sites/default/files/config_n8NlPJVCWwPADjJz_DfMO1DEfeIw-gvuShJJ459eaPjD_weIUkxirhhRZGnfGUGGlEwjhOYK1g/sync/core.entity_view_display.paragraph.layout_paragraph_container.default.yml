@@ -1,0 +1,24 @@
+uuid: 26a9b4e1-a67c-41f7-a801-79be23739cf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout_paragraph_container.field_layout_paragraph_container
+    - paragraphs.paragraphs_type.layout_paragraph_container
+  module:
+    - entity_reference_revisions
+id: paragraph.layout_paragraph_container.default
+targetEntityType: paragraph
+bundle: layout_paragraph_container
+mode: default
+content:
+  field_layout_paragraph_container:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
