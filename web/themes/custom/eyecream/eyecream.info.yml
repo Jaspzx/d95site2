@@ -2,5 +2,24 @@ name: 'Eyecream'
 type: theme
 description: 'A great theme for the eye.'
 core: 8.x
-base theme: false
+base theme: classy
 core_version_requirement: ^8 || ^9
+
+# Regions
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  # highlighted: Highlighted
+  # breadcrumb: Breadcrumb
+  # social: Social Bar
+  # content_above: Content Above
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'
+  # sidebar: 'Sidebar'
+  # content_below: 'Content Below'
+  # footer_top: 'Footer Top'
+  # footer_bottom: 'Footer Bottom'
