@@ -4,11 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_layoutparagraph
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.container
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.layoutpara
-    - paragraphs.paragraphs_type.weekly_highlights
   module:
     - entity_reference_revisions
 id: paragraph.layoutpara.field_layoutparagraph
@@ -24,27 +20,22 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      layoutpara: layoutpara
-      banner: banner
-      container: container
-      from_library: from_library
-      weekly_highlights: weekly_highlights
+    target_bundles: null
     negate: 0
     target_bundles_drag_drop:
       banner:
         weight: 7
-        enabled: true
+        enabled: false
       container:
         weight: 8
-        enabled: true
+        enabled: false
       from_library:
         weight: 9
-        enabled: true
+        enabled: false
       layoutpara:
         weight: 6
-        enabled: true
+        enabled: false
       weekly_highlights:
         weight: 10
-        enabled: true
+        enabled: false
 field_type: entity_reference_revisions
