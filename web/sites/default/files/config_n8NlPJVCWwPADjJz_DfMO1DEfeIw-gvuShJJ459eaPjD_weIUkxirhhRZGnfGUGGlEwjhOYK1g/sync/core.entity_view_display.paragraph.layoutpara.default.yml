@@ -6,14 +6,14 @@ dependencies:
     - field.field.paragraph.layoutpara.field_layoutparagraph
     - paragraphs.paragraphs_type.layoutpara
   module:
-    - entity_reference_revisions
+    - layout_paragraphs
 id: paragraph.layoutpara.default
 targetEntityType: paragraph
 bundle: layoutpara
 mode: default
 content:
   field_layoutparagraph:
-    type: entity_reference_revisions_entity_view
+    type: layout_paragraphs
     label: above
     settings:
       view_mode: default
