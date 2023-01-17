@@ -7468,6 +7468,10 @@
     ],
     "dev": true,
     "dev-package-names": [
+        "doctrine/common",
+        "doctrine/event-manager",
+        "doctrine/persistence",
+        "drupal/devel",
         "kint-php/kint"
     ]
 }
