@@ -81,14 +81,14 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{{kint()}}
+<!-- {{kint(view_mode)}} -->
+<!-- {{dump(_context|keys)}} -->
 
 <article{{ attributes.addClass(classes) }}>
-  {% if view_mode =='full' %}
-  {% trans %} Welcome to the gym page!{%endtrans%}
-  {% endif %}
-
   <header class="{{ layout }}">
+    {% if view_mode =='full' %}
+      {% trans %} Welcome to the gym page! {%endtrans%}
+    {% endif %}
     {{ title_prefix }}
     {% if label and not page %}
     <h2{{ title_attributes.addClass('node__title') }}>
