@@ -1,6 +1,6 @@
 uuid: 13d9f0cd-146d-4808-944b-0933498572df
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:8fb5a839-c80d-47a0-8f3e-e9dd1117836f'
@@ -12,7 +12,7 @@ dependencies:
 id: eyecream_openinghours
 theme: eyecream
 region: header
-weight: -3
+weight: -1
 provider: null
 plugin: 'block_content:8fb5a839-c80d-47a0-8f3e-e9dd1117836f'
 settings:
