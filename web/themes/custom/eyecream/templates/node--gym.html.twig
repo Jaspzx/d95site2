@@ -81,6 +81,7 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+{{kint(_content|keys)}}
 <article{{ attributes.addClass(classes) }}>
   {% if view_mode =='full' %}
         {% trans %} Welcome to the gym page!{%endtrans%}
