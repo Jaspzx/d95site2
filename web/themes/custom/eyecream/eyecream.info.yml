@@ -17,7 +17,7 @@ regions:
   # content_above: Content Above
   banner_top: 'Banner Top'
   banner_bottom: 'Banner Bottom'
-  content_top: 'Content Top'
+  content: 'Content'
   content_bottom: 'Content Bottom'
   page_top: 'Page Top'
   page_bottom: 'Page Bottom'
