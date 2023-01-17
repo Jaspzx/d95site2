@@ -11,7 +11,7 @@ _core:
 id: eyecream_help
 theme: eyecream
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: help_block
 settings:

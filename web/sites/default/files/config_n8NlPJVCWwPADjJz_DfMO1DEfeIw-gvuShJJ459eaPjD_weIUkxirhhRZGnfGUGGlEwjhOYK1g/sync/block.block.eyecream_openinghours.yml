@@ -12,7 +12,7 @@ dependencies:
 id: eyecream_openinghours
 theme: eyecream
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'block_content:8fb5a839-c80d-47a0-8f3e-e9dd1117836f'
 settings:
