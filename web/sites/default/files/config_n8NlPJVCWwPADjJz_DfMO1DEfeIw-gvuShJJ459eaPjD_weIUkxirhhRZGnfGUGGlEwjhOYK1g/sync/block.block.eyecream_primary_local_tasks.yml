@@ -1,0 +1,22 @@
+uuid: 6542fefa-c419-499f-896a-d32edb4452a2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eyecream
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: eyecream_primary_local_tasks
+theme: eyecream
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

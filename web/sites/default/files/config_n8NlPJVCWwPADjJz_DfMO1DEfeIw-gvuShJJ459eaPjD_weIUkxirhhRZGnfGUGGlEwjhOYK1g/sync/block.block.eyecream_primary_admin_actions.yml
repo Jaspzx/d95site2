@@ -1,0 +1,20 @@
+uuid: fea5e782-3ad0-4e79-a100-02b70e8a87f9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eyecream
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: eyecream_primary_admin_actions
+theme: eyecream
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

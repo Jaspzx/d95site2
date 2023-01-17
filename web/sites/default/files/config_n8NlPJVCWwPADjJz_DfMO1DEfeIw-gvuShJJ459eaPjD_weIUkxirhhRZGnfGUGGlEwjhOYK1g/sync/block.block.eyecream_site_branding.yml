@@ -1,0 +1,25 @@
+uuid: b30b77f8-983d-4999-8c73-d89946206a51
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eyecream
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: eyecream_site_branding
+theme: eyecream
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
