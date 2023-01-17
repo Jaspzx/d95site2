@@ -81,7 +81,8 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{{kint(_content|keys)}}
+{{kint(_context|keys)}}
+
 <article{{ attributes.addClass(classes) }}>
   {% if view_mode =='full' %}
   {% trans %} Welcome to the gym page!{%endtrans%}
