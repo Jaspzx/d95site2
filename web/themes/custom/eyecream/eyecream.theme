@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+
+/**
+ * Preprocess function for node.html.twig.
+ */
+function eyecream_preprocess_node(&$variables) {
+  // If the current user is logged in, and they are the owner of the node
+  // being viewed, add a suffix to the label variable.
+  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+    $variables['label']['#suffix'] =' - [You are the author]';
+  }
+}
