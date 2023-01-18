@@ -4,8 +4,8 @@ global:
     theme:
       css/global.css: { weight: 10 }
 
-# eyecream:
-#   version: 1.0.0
-#   css:
-#     theme:
-#       css/outlet.css: { weight: 10 }
+outlet:
+  version: 1.0.0
+  css:
+    theme:
+      css/outlet.css: { weight: 10 }

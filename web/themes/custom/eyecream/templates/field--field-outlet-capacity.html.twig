@@ -37,7 +37,7 @@
  * @see template_preprocess_field()
  */
 #}
-<!-- {{kint(items)}} -->
+<!-- {{kint(attributes)}} -->
 {%
   set classes = [
     'field',
@@ -67,12 +67,12 @@
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
-  <!-- <div>
+  <div>
     Current capacity: {{ currentLoad }}
-    {% if currentLoad > items.0.content %}
-      <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, you will not be able to enter till further notice.</div>
+    {% if (items.0.content|number_format) < currentLoad %}
+      <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, please come back later.</div>
     {% endif %}
-  </div> -->
+  </div>
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
@@ -89,7 +89,7 @@
   <div>
     Current capacity: {{ currentLoad }}
     {% if (items.0.content|number_format) < currentLoad %}
-      <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
+      <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, please come back later.</div>
     {% endif %}
   </div>
 {% endif %}

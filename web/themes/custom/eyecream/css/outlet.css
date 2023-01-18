@@ -1,4 +1,8 @@
-h1, h2, h3, h4, h5, h6, p {
-  color: red;
-  font-family: 'Comic Sans MS', cursive, sans-serif !important;
+h1, h2, h3{
+/*  color: red;*/
+  font-family: 'Roboto', sans-serif;
+}
+
+.layout__region .block {
+  padding: 1rem 0rem;
 }

@@ -12,8 +12,7 @@ function eyecream_preprocess_node(&$variables) {
 
 // Preprocess for OUTLET
   if ($variables['node']->getType() == 'outlet') {
-    $variables['#attached']['library'][] = 'eyecream/eyecream';
-    $variables['currentLoad'] = rand(0, 100);
+    $variables['#attached']['library'][] = 'eyecream/outlet';
   }
 }
 
