@@ -84,8 +84,8 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          0ffeb0fe-a684-41b0-bf6d-4a4e46d95a3b:
-            uuid: 0ffeb0fe-a684-41b0-bf6d-4a4e46d95a3b
+          52064ba8-a2b2-49b9-acc6-eb8cc6d77e7d:
+            uuid: 52064ba8-a2b2-49b9-acc6-eb8cc6d77e7d
             region: second
             configuration:
               id: 'views_block:recent_articles-block_1'

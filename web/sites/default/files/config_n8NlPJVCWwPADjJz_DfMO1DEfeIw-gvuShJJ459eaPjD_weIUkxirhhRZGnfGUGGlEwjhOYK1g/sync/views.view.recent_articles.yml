@@ -1,10 +1,9 @@
-uuid: d05fdb8e-b540-4b52-a959-4625c9fa5a0f
+uuid: 0e6d73a6-bd98-42b5-8097-5cacbd4bf4f0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_article_body
-    - node.type.article
   module:
     - node
     - text
@@ -66,7 +65,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -138,9 +137,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 600
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -206,69 +204,67 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-        type:
-          id: type
+        title:
+          id: title
           table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            article: article
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_gym_target_id:
-          id: field_gym_target_id
-          table: node__field_gym
-          field: field_gym_target_id
+          field: title
           relationship: field_gym
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          entity_type: node
+          entity_field: title
+          plugin_id: string
           operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
+          value: ''
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: title_op
+            label: Title
             description: ''
             use_operator: false
-            operator: ''
+            operator: title_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: title
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              gym_admin: '0'
             placeholder: ''
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: Title
+            description: null
+            identifier: title
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
         options:
           default_field_elements: true
-          inline: {  }
+          inline:
+            title: title
+            field_article_body: field_article_body
           separator: ''
           hide_empty: false
       query:
@@ -297,6 +293,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -313,6 +310,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
