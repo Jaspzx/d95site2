@@ -37,7 +37,7 @@
  * @see template_preprocess_field()
  */
 #}
-<!-- {{kint(attributes)}} -->
+{{kint(items)}}
 {%
   set classes = [
     'field',
@@ -53,7 +53,8 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{{items.0.content.value}}
+{{items.0.content}}
+{{currentLoad}}
 
 {% if label_hidden %}
   {% if multiple %}
@@ -69,7 +70,7 @@
   {% endif %}
   <div>
     Current capacity: {{ currentLoad }}
-    {% if (items.0.content|number_format) < currentLoad %}
+    {% if items.0.content < currentLoad %}
       <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, please come back later.</div>
     {% endif %}
   </div>
@@ -88,7 +89,7 @@
   </div>
   <div>
     Current capacity: {{ currentLoad }}
-    {% if (items.0.content|number_format) < currentLoad %}
+    {% if items.0.content < currentLoad %}
       <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, please come back later.</div>
     {% endif %}
   </div>

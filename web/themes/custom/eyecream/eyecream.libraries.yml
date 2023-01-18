@@ -9,3 +9,10 @@ outlet:
   css:
     theme:
       css/outlet.css: {}
+
+gym:
+  version: 1.0.0
+  css:
+    theme:
+      css/gym.css: {}
+

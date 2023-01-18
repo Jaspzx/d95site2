@@ -82,7 +82,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
 <!-- {{kint(view_mode)}} -->
-<!-- {{ dump() }} -->
+{{ dump() }}
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
@@ -108,13 +108,8 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', layout) }}>
-    <div style="display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;">
-      {{ content.field_logo }}
-    </div>
     {# Comments not part of content, so they won't inherit .text-content styles. #}
-    {{ content|without('comment')|without(content.field_logo) }}
+    {{ content|without('comment')}}
   </div>
   {% if content.comment %}
   <div id="comments" class="{{ layout }}">
