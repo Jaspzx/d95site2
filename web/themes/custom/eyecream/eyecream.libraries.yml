@@ -2,10 +2,10 @@ global:
   version: 1.0.0
   css:
     theme:
-      css/global.css: { weight: 10 }
+      css/global.css: {}
 
 outlet:
   version: 1.0.0
   css:
     theme:
-      css/outlet.css: { weight: 10 }
+      css/outlet.css: {}
