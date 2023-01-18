@@ -37,6 +37,7 @@
  * @see template_preprocess_field()
  */
 #}
+<!-- {{kint(items)}} -->
 {%
   set classes = [
     'field',
@@ -52,15 +53,9 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{{dump()}}
+{{items.0.content.value}}
 
 {% if label_hidden %}
-  <div>
-    Current capacity: {{ currentLoad }}
-    {% if currentLoad < 70 %}
-      <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
-    {% endif %}
-  </div>
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
@@ -72,13 +67,13 @@
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
-{% else %}
-  <div>
+  <!-- <div>
     Current capacity: {{ currentLoad }}
-    {% if currentLoad < 70 %}
-      <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
+    {% if currentLoad > items.0.content %}
+      <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, you will not be able to enter till further notice.</div>
     {% endif %}
-  </div>
+  </div> -->
+{% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
@@ -89,6 +84,12 @@
     {% endfor %}
     {% if multiple %}
       </div>
+    {% endif %}
+  </div>
+  <div>
+    Current capacity: {{ currentLoad }}
+    {% if (items.0.content|number_format) < currentLoad %}
+      <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
     {% endif %}
   </div>
 {% endif %}

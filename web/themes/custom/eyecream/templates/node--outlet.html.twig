@@ -16,9 +16,6 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
-    {% if view_mode =='full' %}
-      {% trans %} Welcome to the gym page! {%endtrans%}
-    {% endif %}
     <!--
     {{ title_prefix }}
     {% if label and not page %}
@@ -42,23 +39,9 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', layout) }}>
-    <div>
-      Current capacity: {{ currentLoad }}
-      {% if random(100) < 70 %}
-        <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
-      {% endif %}
-    </div>
-   <!--  <div style="display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;">
-      {{ content.field_logo }}
-    </div> -->
     {# Comments not part of content, so they won't inherit .text-content styles. #}
-    {{ content }}
+    {{ content|without('comment') }}
   </div>
- <!--  {% block content %}
-    <div>{{ content }}</div>
-  {% endblock %} -->
   <!-- {% if content.comment %}
   <div id="comments" class="{{ layout }}">
     {{ content.comment }}
