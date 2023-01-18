@@ -82,13 +82,10 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
 <!-- {{kint(view_mode)}} -->
-{{ dump() }}
+<!-- {{ dump() }} -->
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
-    {% if view_mode =='full' %}
-      {% trans %} Welcome to the gym page! {%endtrans%}
-    {% endif %}
     {{ title_prefix }}
     {% if label and not page %}
     <h2{{ title_attributes.addClass('node__title') }}>
@@ -111,12 +108,6 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', layout) }}>
-    <div>
-      Current capacity:
-      {% if random(100) < 70 %}
-        <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
-      {% endif %}
-    </div>
     <div style="display: flex;
     flex-wrap: nowrap;
     justify-content: center;">
