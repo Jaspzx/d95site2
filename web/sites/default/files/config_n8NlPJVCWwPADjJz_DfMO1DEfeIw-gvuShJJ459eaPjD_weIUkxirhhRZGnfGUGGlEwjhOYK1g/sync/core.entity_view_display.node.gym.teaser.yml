@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.gym.field_description
     - field.field.node.gym.field_logo
     - field.field.node.gym.field_outlets
+    - field.field.node.gym.layout_builder__layout
     - node.type.gym
   module:
     - user
@@ -24,3 +25,4 @@ hidden:
   field_description: true
   field_logo: true
   field_outlets: true
+  layout_builder__layout: true

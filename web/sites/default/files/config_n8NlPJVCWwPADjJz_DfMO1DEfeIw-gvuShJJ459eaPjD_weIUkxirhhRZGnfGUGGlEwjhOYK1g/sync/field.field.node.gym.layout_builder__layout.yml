@@ -1,0 +1,21 @@
+uuid: 547d205b-d5f1-4979-b08d-7a84e9f735fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.gym
+  module:
+    - layout_builder
+id: node.gym.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: gym
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

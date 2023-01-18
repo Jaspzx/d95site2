@@ -1,6 +1,6 @@
 uuid: 6f7e6e45-f042-4c09-b478-f306337e658b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_equipments

@@ -7,17 +7,79 @@ dependencies:
     - field.field.node.gym.field_logo
     - field.field.node.gym.field_outlets
     - node.type.gym
-    - views.view.recent_articles
   module:
     - layout_builder
-    - layout_discovery
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
-    enabled: false
-    allow_custom: false
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9e720846-6fc2-401a-9350-07023480db4f:
+            uuid: 9e720846-6fc2-401a-9350-07023480db4f
+            region: content
+            configuration:
+              id: 'extra_field_block:node:gym:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          692fbe6c-d402-44a3-a785-06ea3c8f4af6:
+            uuid: 692fbe6c-d402-44a3-a785-06ea3c8f4af6
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_logo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          3da77a33-3408-427b-89d1-d3b27db6fe78:
+            uuid: 3da77a33-3408-427b-89d1-d3b27db6fe78
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_outlets'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          01e91f18-6421-4c0e-b9be-788034f1b0d7:
+            uuid: 01e91f18-6421-4c0e-b9be-788034f1b0d7
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 id: node.gym.default
 targetEntityType: node
 bundle: gym
