@@ -46,7 +46,7 @@
       <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
     {% endif %}
 
-    <ul {{ attributes.addClass('primary-nav__menu', primary_nav_level).setAttribute('data-drupal-selector', drupal_selector_primary_nav_level) }} style="padding:0 5rem;">
+    <ul {{ attributes.addClass('primary-nav__menu', primary_nav_level).setAttribute('data-drupal-selector', drupal_selector_primary_nav_level) }} >
       {% set attributes = attributes.removeClass(primary_nav_level) %}
       {% for item in items %}
 

@@ -4,8 +4,8 @@ description: 'A great theme for the eye.'
 core: 8.x
 base theme: olivero
 core_version_requirement: ^8 || ^9
-# libraries:
-#   - eyecream/eyecream
+libraries:
+  - eyecream/global
 
 # Regions
 regions:

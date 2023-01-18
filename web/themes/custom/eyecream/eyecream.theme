@@ -10,7 +10,15 @@ function eyecream_preprocess_node(&$variables) {
     $variables['current_user_is_owner'] = TRUE;
   }
 
+// Preprocess for OUTLET
   if ($variables['node']->getType() == 'outlet') {
     $variables['#attached']['library'][] = 'eyecream/eyecream';
+    $variables['currentLoad'] = rand(0, 100);
   }
+}
+
+function eyecream_preprocess_node__outlet(&$variables){
+  // $variables['currentLoad'] = rand(0, 100);
+    // $variables['#attached']['library'][] = 'eyecream/eyecream';
+  //
 }
