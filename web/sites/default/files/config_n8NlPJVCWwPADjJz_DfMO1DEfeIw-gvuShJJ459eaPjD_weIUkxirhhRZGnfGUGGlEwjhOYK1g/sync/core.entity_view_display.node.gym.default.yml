@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.gym.field_description
+    - field.field.node.gym.field_gym_name
     - field.field.node.gym.field_logo
     - field.field.node.gym.field_outlets
     - field.field.node.gym.layout_builder__layout
@@ -11,6 +12,7 @@ dependencies:
     - views.view.recent_articles
   module:
     - layout_builder
+    - layout_discovery
     - text
     - user
     - views
@@ -19,6 +21,29 @@ third_party_settings:
     enabled: true
     allow_custom: true
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: recent
+          context_mapping: {  }
+        components:
+          b39fd810-e8c5-4c4c-9f3c-c9e7ef528bc9:
+            uuid: b39fd810-e8c5-4c4c-9f3c-c9e7ef528bc9
+            region: content
+            configuration:
+              id: 'field_block:node:gym:field_gym_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
@@ -109,6 +134,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_gym_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_logo:
     type: entity_reference_entity_view

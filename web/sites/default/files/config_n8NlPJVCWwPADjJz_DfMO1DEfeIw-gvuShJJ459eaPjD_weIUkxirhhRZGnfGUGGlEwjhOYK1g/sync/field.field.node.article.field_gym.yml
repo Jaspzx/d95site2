@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_gym
     - node.type.article
     - node.type.gym
-    - node.type.outlet
 id: node.article.field_gym
 field_name: field_gym
 entity_type: node
@@ -22,7 +21,6 @@ settings:
   handler_settings:
     target_bundles:
       gym: gym
-      outlet: outlet
     sort:
       field: _none
       direction: ASC

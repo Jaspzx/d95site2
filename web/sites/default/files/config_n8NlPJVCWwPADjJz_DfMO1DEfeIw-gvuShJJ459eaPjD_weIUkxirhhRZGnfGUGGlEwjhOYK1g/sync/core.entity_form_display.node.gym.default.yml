@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.gym.field_description
+    - field.field.node.gym.field_gym_name
     - field.field.node.gym.field_logo
     - field.field.node.gym.field_outlets
     - field.field.node.gym.layout_builder__layout
@@ -29,6 +30,14 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_gym_name:
+    type: string_textfield
+    weight: 125
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_logo:
