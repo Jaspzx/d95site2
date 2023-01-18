@@ -1,0 +1,67 @@
+{% set layout = layout ? 'layout--' ~ layout|clean_class %}
+
+{%
+set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+layout ? 'grid-full',
+layout ? 'ie11-autorow',
+node.isPromoted() ? 'node--promoted',
+node.isSticky() ? 'node--sticky',
+not node.isPublished() ? 'node--unpublished',
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+{{dump(node.type.value.0)}}
+
+<article{{ attributes.addClass(classes) }}>
+  <header class="{{ layout }}">
+    {% if view_mode =='full' %}
+      {% trans %} Welcome to the gym page! {%endtrans%}
+    {% endif %}
+    <!--
+    {{ title_prefix }}
+    {% if label and not page %}
+    <h2{{ title_attributes.addClass('node__title') }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+    {% endif %}
+    {{ title_suffix }} -->
+    {% if display_submitted %}
+    <div class="node__meta">
+      {% if author_picture %}
+      <div class="node__author-image">
+        {{ author_picture }}
+      </div>
+      {% endif %}
+      <span{{ author_attributes }}>
+        {{ 'By'|t }} {% apply spaceless %}{{ author_name }}{% endapply %}, {{ date }}
+      </span>
+      {{ metadata }}
+    </div>
+    {% endif %}
+  </header>
+  <div{{ content_attributes.addClass('node__content', layout) }}>
+    <div>
+      Current capacity:
+      {% if random(100) < 70 %}
+        <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
+      {% endif %}
+    </div>
+    <div>
+      {{node.type.value.0.target_id}}
+    </div>
+   <!--  <div style="display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;">
+      {{ content.field_logo }}
+    </div> -->
+    {# Comments not part of content, so they won't inherit .text-content styles. #}
+    {{ content }}
+  </div>
+  <!-- {% if content.comment %}
+  <div id="comments" class="{{ layout }}">
+    {{ content.comment }}
+  </div>
+  {% endif %} -->
+</article>

@@ -1,0 +1,21 @@
+# rainbow:
+#   version: 1.0
+#   remote: https://github.com/xoxco/rainbow-text
+#   license:
+#     name: MIT
+#     url: https://github.com/xoxco/Rainbow-Text/blob/master/README.md
+#     gpl-compatible: true
+#   js:
+#     js/rainbow.js: { }
+#   dependencies:
+#     - core/jquery
+
+eyecream:
+  version: 1.0.0
+  css:
+    theme:
+      css/outlet.css: { weight: 10 }
+  # js:
+  #   js/rainbow-headings.js: { }
+  # dependencies:
+  #   - retro/rainbow

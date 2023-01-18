@@ -6,7 +6,7 @@ function eyecream_preprocess_node(&$variables) {
   $variables['current_user_is_owner'] = FALSE;
   //
   if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
-      $variables['label']['#suffix'] =' - [You are the author]';
-      $variables['current_user_is_owner'] = TRUE;
+    $variables['label']['#suffix'] =' - [You are the author]';
+    $variables['current_user_is_owner'] = TRUE;
   }
 }

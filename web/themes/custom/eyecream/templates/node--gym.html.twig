@@ -82,7 +82,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
 <!-- {{kint(view_mode)}} -->
-{{dump()}}
+{{ dump() }}
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
@@ -115,7 +115,6 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
       Current capacity:
       {% if random(100) < 70 %}
         <div style="color:red; padding-bottom:3rem;">Gym is currently at over capacity, please come back later.</div>
-        <!-- {else} -->
       {% endif %}
     </div>
     <div style="display: flex;

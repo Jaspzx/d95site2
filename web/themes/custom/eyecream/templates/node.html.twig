@@ -82,13 +82,13 @@
     current_user_is_owner ? 'node--current-user-is-owner',
   ]
 %}
-<!-- {{ kint() }} -->
+{{ dump() }}
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
-    {% if view_mode =='full' %}
+    <!-- {% if view_mode =='full' %}
       {% trans %} Welcome to the gym page!{%endtrans%}
-    {% endif %}
+    {% endif %} -->
     {{ title_prefix }}
       {% if label and not page %}
       <h2{{ title_attributes.addClass('node__title') }}>
@@ -120,6 +120,3 @@
     </div>
   {% endif %}
 </article>
-<div>
-  This is the end of the node.
-</div>
