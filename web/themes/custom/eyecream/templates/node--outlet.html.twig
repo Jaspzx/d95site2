@@ -12,7 +12,6 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{{dump(node.type.value.0)}}
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
@@ -49,7 +48,9 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
       {% endif %}
     </div>
     <div>
-      {{node.type.value.0.target_id}}
+      <!-- {{node.type.value.0.target_id}} -->
+      {{node.getType}}
+
     </div>
    <!--  <div style="display: flex;
     flex-wrap: nowrap;

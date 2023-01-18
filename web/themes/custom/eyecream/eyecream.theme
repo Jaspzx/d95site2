@@ -9,4 +9,8 @@ function eyecream_preprocess_node(&$variables) {
     $variables['label']['#suffix'] =' - [You are the author]';
     $variables['current_user_is_owner'] = TRUE;
   }
+
+  if ($variables['node']->getType() == 'outlet') {
+    $variables['#attached']['library'][] = 'eyecream/eyecream';
+  }
 }
