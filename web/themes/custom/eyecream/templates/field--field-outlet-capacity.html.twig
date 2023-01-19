@@ -53,8 +53,9 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{{items.0.content}}
-{{currentLoad}}
+<!-- {{dump(items)}} -->
+<!-- {{items.0.content}}
+{{currentLoad}} -->
 
 {% if label_hidden %}
   {% if multiple %}
@@ -70,7 +71,7 @@
   {% endif %}
   <div>
     Current capacity: {{ currentLoad }}
-    {% if items.0.content < currentLoad %}
+    {% if currentLoad > items.0.content['#markup']|number_format %}
       <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, please come back later.</div>
     {% endif %}
   </div>
@@ -89,7 +90,7 @@
   </div>
   <div>
     Current capacity: {{ currentLoad }}
-    {% if items.0.content < currentLoad %}
+    {% if currentLoad > items.0.content['#markup']|number_format %}
       <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, please come back later.</div>
     {% endif %}
   </div>
