@@ -16,3 +16,9 @@ gym:
     theme:
       css/gym.css: {}
 
+paragraph-deals:
+  version: 1.0.0
+  css:
+    theme:
+      css/paragraph-deals.css: {}
+

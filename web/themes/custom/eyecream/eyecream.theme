@@ -17,8 +17,11 @@ function eyecream_preprocess_node(&$variables) {
 }
 
 function eyecream_preprocess_field(&$variables) {
-  // $variables['currentLoad'] = rand(0, 100);
   if ($variables['element']['#field_name'] == 'field_outlet_capacity') {
     $variables['currentLoad'] = rand(0, 100);
   }
+}
+
+function eyecream_preprocess_paragraph(&$variables){
+  $variables['#attached']['library'][] = 'eyecream/paragraph-deals.css';
 }
