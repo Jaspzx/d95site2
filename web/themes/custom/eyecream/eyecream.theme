@@ -18,7 +18,6 @@ function eyecream_preprocess_node(&$variables) {
 
 function eyecream_preprocess_field(&$variables) {
   if ($variables['element']['#field_name'] == 'field_outlet_capacity') {
-    // $capacity = $variables['items'][0]['content']['#markup'];
     // $node = $variables['element']['#object'];
     $variables['currentLoad'] = rand(0, 100);
 
