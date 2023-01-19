@@ -1,21 +1,25 @@
-uuid: 413c385c-28e9-47b7-8317-49ff2e99b641
+uuid: 0f468829-e97c-48f2-a0a4-0e39ac3c6e3e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_outlet_capacity
     - node.type.outlet
-  module:
-    - text
 id: node.outlet.field_outlet_capacity
 field_name: field_outlet_capacity
 entity_type: node
 bundle: outlet
 label: 'Outlet Capacity'
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 50
 default_value_callback: ''
-settings: {  }
-field_type: text_long
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

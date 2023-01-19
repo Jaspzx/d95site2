@@ -91,11 +91,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_outlet_capacity:
-    type: text_textarea
+    type: number
     weight: 131
     region: content
     settings:
-      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_tel:

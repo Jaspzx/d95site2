@@ -1,16 +1,17 @@
-uuid: 6fa5e7aa-c760-4869-bbce-e55a9e7ca980
+uuid: d4999f84-2c4c-4c43-ab25-039f6f8df01f
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
 id: node.field_outlet_capacity
 field_name: field_outlet_capacity
 entity_type: node
-type: text_long
-settings: {  }
-module: text
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
 locked: false
 cardinality: 1
 translatable: true

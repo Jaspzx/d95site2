@@ -175,56 +175,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 6
             additional: {  }
-          24b982ee-1d25-4240-a9cd-ee0a8e3b9263:
-            uuid: 24b982ee-1d25-4240-a9cd-ee0a8e3b9263
+          cecb9ce9-4516-4cf3-adf2-92fa66825a0c:
+            uuid: cecb9ce9-4516-4cf3-adf2-92fa66825a0c
             region: second
             configuration:
               id: 'field_block:node:outlet:field_outlet_capacity'
-              label: 'Outlet Capacity'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          d43bd8a4-7f83-4f53-b0c8-a8f6a390c6b9:
-            uuid: d43bd8a4-7f83-4f53-b0c8-a8f6a390c6b9
-            region: content
-            configuration:
-              id: 'field_block:node:outlet:field_gym_images'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
               formatter:
-                type: entity_reference_entity_view
+                type: number_integer
                 label: above
                 settings:
-                  view_mode: default
-                  link: false
+                  thousand_separator: ''
+                  prefix_suffix: true
                 third_party_settings: {  }
-            weight: 6
-            additional: {  }
-          81664cbd-5f04-4013-8952-23e517eba55b:
-            uuid: 81664cbd-5f04-4013-8952-23e517eba55b
-            region: content
-            configuration:
-              id: 'extra_field_block:node:outlet:links'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 2
+            weight: 0
             additional: {  }
         third_party_settings: {  }
 id: node.outlet.default
@@ -285,6 +251,15 @@ content:
     third_party_settings: {  }
     weight: 107
     region: content
+  field_outlet_capacity:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
   field_tel:
     type: number_integer
     label: above
@@ -312,5 +287,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_outlet_capacity: true
   layout_builder__layout: true
