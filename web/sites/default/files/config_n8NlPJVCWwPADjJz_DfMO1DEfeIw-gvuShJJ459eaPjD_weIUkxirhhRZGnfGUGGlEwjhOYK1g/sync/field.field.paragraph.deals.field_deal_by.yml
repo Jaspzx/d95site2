@@ -1,0 +1,29 @@
+uuid: 264badf7-e33e-481b-91ba-9e8f869fe979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_deal_by
+    - node.type.gym
+    - paragraphs.paragraphs_type.deals
+id: paragraph.deals.field_deal_by
+field_name: field_deal_by
+entity_type: paragraph
+bundle: deals
+label: 'Deal By'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gym: gym
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
