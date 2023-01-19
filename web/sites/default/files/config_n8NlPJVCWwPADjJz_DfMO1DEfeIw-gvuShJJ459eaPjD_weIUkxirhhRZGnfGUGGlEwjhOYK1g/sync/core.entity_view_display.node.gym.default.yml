@@ -12,7 +12,6 @@ dependencies:
     - views.view.recent_articles
   module:
     - layout_builder
-    - layout_discovery
     - text
     - user
     - views
@@ -21,29 +20,6 @@ third_party_settings:
     enabled: true
     allow_custom: true
     sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: recent
-          context_mapping: {  }
-        components:
-          b39fd810-e8c5-4c4c-9f3c-c9e7ef528bc9:
-            uuid: b39fd810-e8c5-4c4c-9f3c-c9e7ef528bc9
-            region: content
-            configuration:
-              id: 'field_block:node:gym:field_gym_name'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
