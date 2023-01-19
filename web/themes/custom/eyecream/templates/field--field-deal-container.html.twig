@@ -59,7 +59,7 @@
       {% for item in items %}
         {% set zebra_class = loop.index0 is odd ? 'zebra-odd' : 'zebra-even' %}
         <div{{ item.attributes.addClass(zebra_class) }}>
-          {{ item.content }}
+          {{ item.content}}
         </div>
       {% endfor %}
     </div>
