@@ -18,7 +18,15 @@ function eyecream_preprocess_node(&$variables) {
 
 function eyecream_preprocess_field(&$variables) {
   if ($variables['element']['#field_name'] == 'field_outlet_capacity') {
+    // $capacity = $variables['items'][0]['content']['#markup'];
+    // $node = $variables['element']['#object'];
     $variables['currentLoad'] = rand(0, 100);
+
+    $variables['gymFull'] = FALSE;
+    if ($variables['currentLoad'] > $variables['items'][0]['content']['#markup']){
+      $variables['gymFull'] = TRUE;
+    }
+    // $variables['testt'] = $variables['node'];
   }
 }
 
@@ -27,15 +35,13 @@ function eyecream_preprocess_paragraph__deals(&$variables){
   $variables['testt'] = "hellooooooo";
 }
 
-// function eyecream_preprocess_paragraph(&$variables) {
-//   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
-//   $paragraph = $variables['paragraph'];
-//   // Get the type
-//   $parentBundle = $paragraph->bundle();
-//   if($parentBundle == 'deals') {
-//      // Add variables here
-//     $variables['#attached']['library'][] = 'eyecream/paragraph-deals.css';
-//      //
-//     $variables['sitename'] = \Drupal::config('system.site')->get('name');
-//   }
-// }
+function eyecream_theme() {
+  return [
+    'two_column' => [
+      'template' => 'templates/two-column',
+      // layout_plugin expects the theme hook to be declared with this:
+      'render element' => 'content',
+      'base hook' => 'layout',
+    ],
+  ];
+}

@@ -52,9 +52,7 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-<!-- {{dump(items)}} -->
-<!-- {{items.0.content}}
-{{currentLoad}} -->
+{{kint()}}
 
 {% if label_hidden %}
   {% if multiple %}
@@ -70,8 +68,8 @@
   {% endif %}
   <div>
     Current capacity: {{ currentLoad }}
-    {% if currentLoad > items.0.content['#markup']|number_format %}
-     <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, you may not be allowed to enter at this time. Do check back again later.</div>
+    {% if gymFull %}
+     <div style="color:red; padding-bottom:3rem;">The outlet is currently running at over capacity, you may not be allowed to enter at this time. Do check back again later.</div>
     {% endif %}
   </div>
 {% else %}
@@ -89,8 +87,9 @@
   </div>
   <div>
     Current capacity: {{ currentLoad }}
-    {% if currentLoad > items.0.content['#markup']|number_format %}
-      <div style="color:red; padding-bottom:3rem;">The Gym is currently running at over capacity, you may not be allowed to enter at this time. Do check back again later.</div>
+    {% if gymFull %}
+      <div style="color:red; padding-bottom:3rem;">The outlet is currently running at over capacity, you may not be allowed to enter at this time. Do check back again later.</div>
+      <div>Or give us a call at: {{tel}}</div>
     {% endif %}
   </div>
 {% endif %}

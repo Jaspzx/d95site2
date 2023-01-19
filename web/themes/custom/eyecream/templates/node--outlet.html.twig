@@ -13,6 +13,8 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class
 ]
 %}
 <!-- {{dump()}} -->
+{{kint(items)}}
+
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
