@@ -1,0 +1,21 @@
+uuid: c6fd7113-7cf1-47e9-8dd8-fea65fc34cd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.layout_builder__layout
+    - paragraphs.paragraphs_type.deals
+  module:
+    - layout_builder
+id: paragraph.deals.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: paragraph
+bundle: deals
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

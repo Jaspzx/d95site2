@@ -1,0 +1,85 @@
+uuid: c3a97006-e3b9-4dd4-9119-5e997421cc3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.deals.field_deal_description
+    - field.field.paragraph.deals.field_deal_thumbnail
+    - field.field.paragraph.deals.layout_builder__layout
+    - paragraphs.paragraphs_type.deals
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          30d8136a-3cd5-4233-9265-99c1f41805a4:
+            uuid: 30d8136a-3cd5-4233-9265-99c1f41805a4
+            region: first
+            configuration:
+              id: 'field_block:paragraph:deals:field_deal_thumbnail'
+              label: 'Deal Thumbnail'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          abe6bb10-9cd9-4279-b475-f5548e5d9dd4:
+            uuid: abe6bb10-9cd9-4279-b475-f5548e5d9dd4
+            region: second
+            configuration:
+              id: 'field_block:paragraph:deals:field_deal_description'
+              label: 'Deal Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.deals.default
+targetEntityType: paragraph
+bundle: deals
+mode: default
+content:
+  field_deal_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_deal_thumbnail:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  layout_builder__layout: true

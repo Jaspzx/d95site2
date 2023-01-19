@@ -1,0 +1,10 @@
+uuid: 3bbbc814-ebb2-47ba-af31-301a65064034
+langcode: en
+status: true
+dependencies: {  }
+id: deals
+label: Deals
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

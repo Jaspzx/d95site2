@@ -1,0 +1,21 @@
+uuid: 2684cdd4-83b1-43b7-9e6c-7d6141f43ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_deal_description
+    - paragraphs.paragraphs_type.deals
+  module:
+    - text
+id: paragraph.deals.field_deal_description
+field_name: field_deal_description
+entity_type: paragraph
+bundle: deals
+label: 'Deal Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
