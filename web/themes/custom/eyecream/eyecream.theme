@@ -22,6 +22,20 @@ function eyecream_preprocess_field(&$variables) {
   }
 }
 
-function eyecream_preprocess_paragraph(&$variables){
-  $variables['#attached']['library'][] = 'eyecream/paragraph-deals.css';
+function eyecream_preprocess_paragraph__deals(&$variables){
+  $variables['#attached']['library'][] = 'eyecream/paragraph-deals';
+  $variables['testt'] = "hellooooooo";
 }
+
+// function eyecream_preprocess_paragraph(&$variables) {
+//   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+//   $paragraph = $variables['paragraph'];
+//   // Get the type
+//   $parentBundle = $paragraph->bundle();
+//   if($parentBundle == 'deals') {
+//      // Add variables here
+//     $variables['#attached']['library'][] = 'eyecream/paragraph-deals.css';
+//      //
+//     $variables['sitename'] = \Drupal::config('system.site')->get('name');
+//   }
+// }
