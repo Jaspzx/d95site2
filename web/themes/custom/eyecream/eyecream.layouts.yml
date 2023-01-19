@@ -1,13 +1,5 @@
-# one_column:
-#   label: 'One column'
-#   category: 'My Layouts'
-#   template: templates/one-column
-#   default_region: main
-#   regions:
-#     main:
-#       label: Main content
 two_column:
-  label: 'Two column'
+  label: 'My Two column'
   category: 'My Layouts'
   template: templates/two-column
   default_region: main
@@ -17,6 +9,6 @@ two_column:
     sidebar:
       label: Sidebar
   icon_map:
-  - [square_one, square_two, square_three]
-  - [rectangle_vertical, rectangle_horizontal, rectangle_horizontal]
-  - [rectangle_vertical, square_four, square_five]
+  - [square_one, square_two]
+  # - [rectangle_vertical, rectangle_horizontal, rectangle_horizontal]
+  # - [rectangle_vertical, square_four, square_five]

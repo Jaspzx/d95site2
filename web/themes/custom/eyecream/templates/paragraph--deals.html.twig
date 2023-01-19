@@ -47,12 +47,11 @@
     'paraStyling'
   ]
 %}
-<!-- {{kint()}} -->
 
 {% block paragraph %}
   <div {{ attributes.addClass(classes) }} >
     {% block content %}
-      {{ content }}
+      {{content}}
     {% endblock %}
   </div>
 {% endblock paragraph %}

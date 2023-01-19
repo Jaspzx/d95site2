@@ -1,4 +1,14 @@
-.paraStyling {
+/*.paraStyling {
   background-color: white;
   border-radius: 1rem;
+}
+*/
+.zebra-odd{
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.zebra-even{
+  border-radius: 1rem;
+  background-color: beige;
 }

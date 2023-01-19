@@ -28,20 +28,24 @@ function eyecream_preprocess_field(&$variables) {
     }
     // $variables['testt'] = $variables['node'];
   }
+
+  if ($variables['element']['#field_name'] == 'field_deal_container') {
+    $variables['#attached']['library'][] = 'eyecream/paragraph-deals';
+  }
 }
 
-function eyecream_preprocess_paragraph__deals(&$variables){
-  $variables['#attached']['library'][] = 'eyecream/paragraph-deals';
-  $variables['testt'] = "hellooooooo";
-}
+// function eyecream_preprocess_paragraph__deals(&$variables){
+//   $variables['#attached']['library'][] = 'eyecream/paragraph-deals';
+//   // $variables['testt'] = "hellooooooo";
+// }
 
-function eyecream_theme() {
-  return [
-    'two_column' => [
-      'template' => 'templates/two-column',
-      // layout_plugin expects the theme hook to be declared with this:
-      'render element' => 'content',
-      'base hook' => 'layout',
-    ],
-  ];
-}
+// function eyecream_theme() {
+//   return [
+//     'two_column' => [
+//       'template' => 'templates/two-column',
+//       // layout_plugin expects the theme hook to be declared with this:
+//       'render element' => 'content',
+//       'base hook' => 'layout',
+//     ],
+//   ];
+// }
