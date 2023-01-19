@@ -10,8 +10,8 @@ function eyecream_preprocess_node(&$variables) {
     $variables['current_user_is_owner'] = TRUE;
   }
 
-// Preprocess for OUTLET
-  if ($variables['node']->getType() == 'outlet') {
+// Preprocess for OUTLET/GYM
+  if ($variables['node']->getType() == 'outlet' || $variables['node']->getType() == 'gym') {
     $variables['#attached']['library'][] = 'eyecream/outlet';
   }
 }

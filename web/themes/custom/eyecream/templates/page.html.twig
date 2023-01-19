@@ -42,9 +42,14 @@
  * @see html.html.twig
  */
 #}
+<!-- {{kint(page.header)}} -->
 <div class="layout-container">
 
-  <header role="banner">
+  <header role="banner"
+    style="display: flex;
+    align-items: center;
+    flex-direction: row;
+  ">
     {{ page.header }}
   </header>
 
