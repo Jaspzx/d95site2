@@ -6,6 +6,11 @@ base theme: olivero
 core_version_requirement: ^8 || ^9
 libraries:
   - eyecream/global
+libraries-override:
+    # Replace the core modernizr library with our custom build.
+    core/modernizr:
+      js:
+        assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
 
 # Regions
 regions:
