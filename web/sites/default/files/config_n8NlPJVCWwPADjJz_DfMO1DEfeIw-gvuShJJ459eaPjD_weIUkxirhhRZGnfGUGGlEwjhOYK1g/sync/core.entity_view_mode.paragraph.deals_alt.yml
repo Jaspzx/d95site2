@@ -1,0 +1,10 @@
+uuid: edf3ad15-31fa-43eb-bf32-0b55ed628431
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.deals_alt
+label: Deals_Alt
+targetEntityType: paragraph
+cache: true
