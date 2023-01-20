@@ -25,12 +25,17 @@ function eyecream_preprocess_field(&$variables) {
     if ($variables['currentLoad'] > $variables['items'][0]['content']['#markup']){
       $variables['gymFull'] = TRUE;
     }
-    // $variables['testt'] = $variables['node'];
   }
 
   if ($variables['element']['#field_name'] == 'field_deal_container') {
     $variables['#attached']['library'][] = 'eyecream/paragraph-deals';
   }
+
+  // $node = $variables['entity'];
+  // $variables['testt1'] = $node;
+  $variables['testt2'] = date('H:i, Y-m-d');
+
+  ddm($variables);
 }
 
 // function eyecream_preprocess_paragraph__deals(&$variables){

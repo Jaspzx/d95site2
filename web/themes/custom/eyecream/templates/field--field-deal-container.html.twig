@@ -52,6 +52,7 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
+{{kint()}}
 
 {% if label_hidden %}
   {% if multiple %}
@@ -65,6 +66,7 @@
     </div>
   {% else %}
     {% for item in items %}
+      {% set zebra_class = loop.index0 is odd ? 'zebra-odd' : 'zebra-even' %}
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
@@ -75,6 +77,7 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
+      {% set zebra_class = loop.index0 is odd ? 'zebra-odd' : 'zebra-even' %}
       <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
