@@ -1,0 +1,7 @@
+simform1.simform1:
+  path: '/simform1/simform1'
+  defaults:
+    _title: 'Simform1'
+    _form: 'Drupal\simform1\Form\simform1'
+  requirements:
+    _permission: 'access content'
