@@ -16,7 +16,9 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  drushform: 0
   dynamic_page_cache: 0
+  ecform: 0
   editor: 0
   entity_reference_revisions: 0
   entity_usage: 0
