@@ -1,0 +1,5 @@
+name: ecform
+type: module
+description: Module for implementing custom form.
+core_version_requirement: ^9 || ^10
+package: Example
