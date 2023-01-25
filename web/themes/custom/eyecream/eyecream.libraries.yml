@@ -2,23 +2,25 @@ global:
   version: 1.0.0
   css:
     theme:
-      css/global.css: {}
+      src/css/global.css: {}
+  js:
+    dist/main.js: {}
 
 outlet:
   version: 1.0.0
   css:
     theme:
-      css/outlet.css: {}
+      src/css/outlet.css: {}
 
 gym:
   version: 1.0.0
   css:
     theme:
-      css/gym.css: {}
+      src/css/gym.css: {}
 
 paragraph-deals:
   version: 1.0.0
   css:
     theme:
-      css/paragraph-deals.css: {}
+      src/css/paragraph-deals.css: {}
 
