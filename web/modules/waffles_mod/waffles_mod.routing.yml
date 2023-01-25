@@ -1,0 +1,15 @@
+waffles_mod.example:
+  path: '/waffles-mod/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\waffles_mod\Controller\WafflesModController::build'
+  requirements:
+    _permission: 'access content'
+
+waffles_mod.settings_form:
+  path: '/admin/config/system/waffles-mod'
+  defaults:
+    _title: 'waffles settings'
+    _form: 'Drupal\waffles_mod\Form\SettingsForm'
+  requirements:
+    _permission: 'administer waffles_mod configuration'

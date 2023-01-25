@@ -1,0 +1,6 @@
+waffles_mod.settings_form:
+  title: 'waffles'
+  description: 'Configure waffles.'
+  parent: system.admin_config_system
+  route_name: waffles_mod.settings_form
+  weight: 10

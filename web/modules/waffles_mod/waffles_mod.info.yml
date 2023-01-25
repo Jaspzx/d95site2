@@ -1,0 +1,6 @@
+name: waffles
+type: module
+description: Custom Module named waffles.
+package: module
+core_version_requirement: ^9 || ^10
+lifecycle: experimental

@@ -1,0 +1,8 @@
+# Schema for the configuration files of the waffles module.
+waffles_mod.settings:
+  type: config_object
+  label: 'waffles settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'

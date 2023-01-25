@@ -1,0 +1,4 @@
+administer waffles_mod configuration:
+  title: 'Administer waffles_mod configuration'
+  description: 'Optional description.'
+  restrict access: true

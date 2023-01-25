@@ -1,0 +1,6 @@
+services:
+  waffles_mod.event_subscriber:
+    class: Drupal\waffles_mod\EventSubscriber\WafflesModSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
