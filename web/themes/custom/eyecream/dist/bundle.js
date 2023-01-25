@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_generator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/generator */ \"./src/js/generator.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\n\nconsole.log((0,_js_generator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\nconsole.log(23);\n\n//# sourceURL=webpack://eyecream/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_generator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/generator */ \"./src/js/generator.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\n\nconsole.log((0,_js_generator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\nconsole.log(22);\n\n//# sourceURL=webpack://eyecream/./src/index.js?");
 
 /***/ }),
 

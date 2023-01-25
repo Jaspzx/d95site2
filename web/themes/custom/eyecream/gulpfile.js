@@ -54,6 +54,7 @@ function reload(done) {
     browserSync.reload();
     done();
 }
+
 gulp.task(
     "default",
     compile

@@ -1,6 +1,6 @@
-const del = require("del");
-const gulp = require("gulp");
-const OUT_DIR = "./dist";
+// const del = require("del");
+// const gulp = require("gulp");
+// const OUT_DIR = "./dist";
 
 // // always copy the html first to dist folder
 // const srcHTML = "./app/template/index.html";
