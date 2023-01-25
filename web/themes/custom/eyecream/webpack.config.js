@@ -16,7 +16,18 @@ module.exports = {
             'css-loader',
             'sass-loader'
           ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
       }
+      // ,
+      // {
+      //   test: /\.js$/,
+      //   use: ["source-map-loader"],
+      //   enforce: "pre"
+      // }
     ]
   }
 }

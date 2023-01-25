@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_generator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/generator */ \"./src/js/generator.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\n\nconsole.log((0,_js_generator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\nconsole.log(23);\n\n//# sourceURL=webpack://eyecream/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/generator.js":
+/*!*****************************!*\
+  !*** ./src/js/generator.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction generateSmth() {\n  return \"hellooooo\";\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateSmth);\n\n//# sourceURL=webpack://eyecream/./src/js/generator.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss":
 /*!*********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
@@ -107,26 +127,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://eyecream/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_generator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/generator */ \"./src/js/generator.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\n\n\nconsole.log((0,_js_generator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])())\nconsole.log(23)\n\n\n//# sourceURL=webpack://eyecream/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/generator.js":
-/*!*****************************!*\
-  !*** ./src/js/generator.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction generateSmth(){\n  return \"hellooooo\";\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateSmth);\n\n\n//# sourceURL=webpack://eyecream/./src/js/generator.js?");
 
 /***/ })
 
