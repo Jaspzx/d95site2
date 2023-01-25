@@ -4,7 +4,7 @@ global:
     theme:
       src/css/global.css: {}
   js:
-    dist/main.js: {}
+    dist/bundle.js: {}
 
 outlet:
   version: 1.0.0
