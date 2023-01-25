@@ -1,11 +1,7 @@
 ecform.ecform:
   path: '/ecform'
   defaults:
-    # _form: '\Drupal\ecform\src\Form\ecForm'
     _form: 'Drupal\ecform\Form\ecForm'
-    # Drupal\waffles_mod\Form\SettingsForm
-    #
-    # _form: '\web\modules\ecform\src\Form\ecForm'
     _title: 'ecForm'
   requirements:
     _permission: 'access content'

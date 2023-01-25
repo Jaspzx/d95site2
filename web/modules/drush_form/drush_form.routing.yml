@@ -1,0 +1,8 @@
+drush_form.drush_form:
+  path: '/drush-form'
+  defaults:
+    _form: 'Drupal\drush_form\Form\drush_form'
+    _title: 'DrushForm'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
