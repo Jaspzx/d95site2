@@ -22,10 +22,10 @@ function registration_form_form_alter(&$form, &$form_state, $form_id) {
  * Form validation callback.
  */
 function registration_form_regform_validate($form, FormStateInterface &$form_state) {
-  // $skip_validation = $form_state->getValue('skip_validation');
+  $skip_validation = $form_state->getValue('skip_validation');
   $nickname = $form_state->getValue('nickname');
-  // if (!$skip_validation && strlen($nickname) < 5) {
-  if (strlen($nickname) < 5) {
+  if (!$skip_validation && strlen($nickname) < 5) {
+  // if (strlen($nickname) < 5) {
     $form_state->setErrorByName('nickname', t('Nickname must be at least 5 characters long.'));
   }
 }

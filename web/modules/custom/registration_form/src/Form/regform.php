@@ -39,11 +39,11 @@ class regform extends FormBase {
       '#title' => t('Enter nickname:'),
       '#required' => TRUE,
     );
-    // $form['skip_validation'] = [
-    //   '#type' => 'checkbox',
-    //   '#title' => $this->t('Skip validation'),
-    //   '#description' => $this->t('Allow the use of a title with fewer than 5 characters.'),
-    // ];
+    $form['skip_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Skip validation'),
+      '#description' => $this->t('Allow the use of a title with fewer than 5 characters.'),
+    ];
     $form['mobile_number'] = array(
       '#type' => 'textfield',
       '#title' => t('Enter Mobile Number:'),
