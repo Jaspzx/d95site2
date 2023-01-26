@@ -74,7 +74,7 @@ class regform extends FormBase {
     //   '#title' => t('Select:'),
     //   '#description' => t('Something')
     // );
-    // $form['actions']['#type'] = 'actions';
+    $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = array(
       '#type' => 'submit',
       '#value' => $this->t('Register'),
@@ -91,9 +91,17 @@ class regform extends FormBase {
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
-  foreach ($form_state->getValues() as $key => $value) {
-    \Drupal::messenger()->addMessage($key . ': ' . $value);
-    }
+    /*
+     * This would normally be replaced by code that actually does something
+     * with the title.
+     */
+    $this->messenger()->addMessage(t("Registration Complete!!"));
   }
+
+  // public function submitForm(array &$form, FormStateInterface $form_state) {
+  //   \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
+  // foreach ($form_state->getValues() as $key => $value) {
+  //   \Drupal::messenger()->addMessage($key . ': ' . $value);
+  //   }
+  // }
 }
