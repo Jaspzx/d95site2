@@ -80,6 +80,16 @@ class regform extends FormBase {
       '#value' => $this->t('Register'),
       '#button_type' => 'primary',
     );
+    // This callback is only called if the button that it is attached to
+    // is the one used to submit the form.
+    $form['alternate_button'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Do alternate thing'),
+      // Note that when you specify a submit handler like this only those defined
+      // in this array of callbacks will be called. If it's not specified, the default
+      // ::submitForm() method will not be called.
+      '#submit' => ['::alternateFormSubmit']
+    ];
     return $form;
   }
 
@@ -90,13 +100,9 @@ class regform extends FormBase {
     // $form_state->setErrorByName($name, $message)
   }
 
-  // public function submitForm(array &$form, FormStateInterface $form_state) {
-  //   /*
-  //    * This would normally be replaced by code that actually does something
-  //    * with the title.
-  //    */
-  //   $this->messenger()->addMessage(t("Registration Complete!!"));
-  // }
+  public function alternateFormSubmit(array &$form, FormStateInterface $form_state) {
+    $this->messenger()->addStatus($this->t('The alternate submit button was pressed.'));
+  }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
