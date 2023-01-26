@@ -16,6 +16,7 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  drush_form: 0
   drushform: 0
   dynamic_page_cache: 0
   ecform: 0
@@ -40,6 +41,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
+  newform: 0
   node: 0
   oembed_providers: 0
   options: 0
@@ -48,6 +50,7 @@ module:
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  registration_form: 0
   responsive_image: 0
   search: 0
   shortcut: 0
