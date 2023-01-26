@@ -7,12 +7,25 @@ namespace Drupal\registration_form\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\TempStore\PrivateTempStoreFactory;
+
 class regform extends FormBase {
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
     return 'regform';
+  }
+
+  /**
+   * Private temporary storage factory.
+   *
+   * @var \Drupal\Core\TempStore\PrivateTempStoreFactory
+   */
+  private $tempStoreFactory;
+
+  public function __construct(PrivateTempStoreFactory $tempStoreFactory) {
+    $this->tempStoreFactory = $tempStoreFactory;
   }
 
   /**
@@ -28,6 +41,10 @@ class regform extends FormBase {
 
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+    $tempstore = $this->tempStoreFactory('tempstore.private')->get('registration_form');
+    $nickname = $tempstore->get('nickname');
+
     $form['full_name'] = array(
       '#type' => 'textfield',
       '#title' => t('Enter Name:'),
@@ -110,13 +127,13 @@ class regform extends FormBase {
     foreach ($form_state->getValues() as $key => $value) {
       \Drupal::messenger()->addMessage($key . ': ' . $value);
     }
-    // $url = Url::fromUri('entity:node/13');
-    // $url = Url::fromRoute('entity.node.canonical', ['node' => 13]);
-    // $form_state->setRedirectUrl($url);
-    // $node = $this->entity;
-    // $form_state->setRedirect(
-    //   'entity.node.canonical',
-    //   ['node' => 13]
-    // );
+    $tempstore = $this->tempStoreFactory->get('registration_form');
+    $tempstore->set('nickname', $nickname);
+
+    $node = $this->entity;
+    $form_state->setRedirect(
+      'entity.node.canonical',
+      ['node' => 13]
+    );
   }
 }
