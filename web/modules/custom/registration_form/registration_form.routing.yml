@@ -5,4 +5,3 @@ registration_form.registration_form:
     _title: 'Registration Form'
   requirements:
     _permission: 'access content'
-    _access: 'TRUE'
