@@ -34,3 +34,11 @@ function registration_form_regform_validate($form, FormStateInterface &$form_sta
 function registration_form_regform_submit($form, FormStateInterface &$form_state){
   \Drupal::messenger()->addStatus('Called registration_form_regform_submit.');
 }
+
+// /**
+//  * Implements hook_form_alter().
+//  */
+// function registration_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//   /* Your code here */
+// }
+
