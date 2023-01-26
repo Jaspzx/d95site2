@@ -106,8 +106,17 @@ class regform extends FormBase {
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
+    // \Drupal::messenger()->addStatus(t('Your record has been saved. Please add another record.'));
     foreach ($form_state->getValues() as $key => $value) {
       \Drupal::messenger()->addMessage($key . ': ' . $value);
     }
+    // $url = Url::fromUri('entity:node/13');
+    // $url = Url::fromRoute('entity.node.canonical', ['node' => 13]);
+    // $form_state->setRedirectUrl($url);
+    // $node = $this->entity;
+    // $form_state->setRedirect(
+    //   'entity.node.canonical',
+    //   ['node' => 13]
+    // );
   }
 }
