@@ -2,13 +2,13 @@
   padding-bottom: 1rem;
 }*/
 
-.layout__region--second > div:first-child{
-  padding-bottom: 1.5rem;
+.layout__region--first > div:first-child{
+  padding: 1.5rem;
 }
 
 .zebra-odd{
   border-radius: 1rem;
-  background-color: white;
+  background-color: LightGray;
 }
 
 .zebra-even{
