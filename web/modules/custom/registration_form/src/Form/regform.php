@@ -7,16 +7,12 @@ namespace Drupal\registration_form\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\TempStore\PrivateTempStoreFactory;
 
 class regform extends FormBase {
-  /**
-   * {@inheritdoc}
-   */
-  public function getFormId() {
-    return 'regform';
-  }
-
   /**
    * Private temporary storage factory.
    *
@@ -24,8 +20,23 @@ class regform extends FormBase {
    */
   private $tempStoreFactory;
 
-  public function __construct(PrivateTempStoreFactory $tempStoreFactory) {
+  public function __construct(PrivateTempStoreFactory $tempStoreFactory,LoggerChannelFactoryInterface $logger_factory) {
     $this->tempStoreFactory = $tempStoreFactory;
+    $this->loggerFactory = $logger_factory;
+  }
+
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('tempstore.private'),
+      $container->get('logger.factory')
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'regform';
   }
 
   /**
@@ -39,10 +50,9 @@ class regform extends FormBase {
     }
   }
 
-
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $tempstore = $this->tempStoreFactory('tempstore.private')->get('registration_form');
+    $tempstore = \Drupal::service('tempstore.private')->get('reg_form_vals');
     $nickname = $tempstore->get('nickname');
 
     $form['full_name'] = array(
@@ -55,6 +65,7 @@ class regform extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Enter nickname:'),
       '#required' => TRUE,
+      '#default_value' => $nickname ? $nickname : '',
     );
     $form['skip_validation'] = [
       '#type' => 'checkbox',
@@ -102,6 +113,7 @@ class regform extends FormBase {
     $form['alternate_button'] = [
       '#type' => 'submit',
       '#value' => $this->t('Do alternate thing'),
+      '#disabled' => TRUE,
       // Note that when you specify a submit handler like this only those defined
       // in this array of callbacks will be called. If it's not specified, the default
       // ::submitForm() method will not be called.
@@ -127,10 +139,17 @@ class regform extends FormBase {
     foreach ($form_state->getValues() as $key => $value) {
       \Drupal::messenger()->addMessage($key . ': ' . $value);
     }
-    $tempstore = $this->tempStoreFactory->get('registration_form');
-    $tempstore->set('nickname', $nickname);
+    try{
+      $nickname = $form_state->getValue('nickname');
+      $tempstore = \Drupal::service('tempstore.private')->get('reg_form_vals');
+      $tempstore->set('nickname', $nickname);
+      // $this->loggerFactory->get('reg_form_vals')->alert(t("wdwd"));
+    }catch(\Exception $error){
+      // Store this error in the log.
+      // $this->loggerFactory->get('reg_form_vals')->alert(t('@err', ['@err' => $error]));
+      $this->messenger->addWarning(t('Unable to proceed, please try again.'));
+    }
 
-    $node = $this->entity;
     $form_state->setRedirect(
       'entity.node.canonical',
       ['node' => 13]
