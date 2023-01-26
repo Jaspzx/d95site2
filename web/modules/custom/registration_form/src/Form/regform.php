@@ -90,18 +90,18 @@ class regform extends FormBase {
     // $form_state->setErrorByName($name, $message)
   }
 
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    /*
-     * This would normally be replaced by code that actually does something
-     * with the title.
-     */
-    $this->messenger()->addMessage(t("Registration Complete!!"));
-  }
-
   // public function submitForm(array &$form, FormStateInterface $form_state) {
-  //   \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
-  // foreach ($form_state->getValues() as $key => $value) {
-  //   \Drupal::messenger()->addMessage($key . ': ' . $value);
-  //   }
+  //   /*
+  //    * This would normally be replaced by code that actually does something
+  //    * with the title.
+  //    */
+  //   $this->messenger()->addMessage(t("Registration Complete!!"));
   // }
+
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
+    foreach ($form_state->getValues() as $key => $value) {
+      \Drupal::messenger()->addMessage($key . ': ' . $value);
+    }
+  }
 }

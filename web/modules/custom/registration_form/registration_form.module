@@ -15,6 +15,7 @@ function registration_form_form_alter(&$form, &$form_state, $form_id) {
     // prefixing them with the name of your module. A common pattern is:
     // {MODULE}_{FORM ID}_validate().
     $form['#validate'][] = 'registration_form_regform_validate';
+    $form['#submit'][] = 'registration_form_regform_submit';
   }
 }
 
@@ -30,3 +31,6 @@ function registration_form_regform_validate($form, FormStateInterface &$form_sta
   }
 }
 
+function registration_form_regform_submit($form, FormStateInterface &$form_state){
+  \Drupal::messenger()->addStatus('Called registration_form_regform_submit.');
+}
