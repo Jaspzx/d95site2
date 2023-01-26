@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_form_alter().form_api_example_form_alter
+ */
+function registration_form_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'regform') {
+    // A form can have more than one validation handler. So we want to make
+    // sure that we are adding to the existing array rather than overwriting it.
+    // The value can be either the name of a PHP function, or the method on a
+    // class, that should be called to perform validation.
+    //
+    // If using a function name it's a good idea to keep this unique by
+    // prefixing them with the name of your module. A common pattern is:
+    // {MODULE}_{FORM ID}_validate().
+    $form['#validate'][] = 'registration_form_regform_validate';
+  }
+}
+
+/**
+ * Form validation callback.
+ */
+function registration_form_regform_validate($form, FormStateInterface &$form_state) {
+  // $skip_validation = $form_state->getValue('skip_validation');
+  $nickname = $form_state->getValue('nickname');
+  // if (!$skip_validation && strlen($title) < 5) {
+  if (strlen($nickname) < 5) {
+    $form_state->setErrorByName('title', $this->t('Nickname must be at least 5 characters long.'));
+  }
+}
+

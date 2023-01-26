@@ -15,12 +15,35 @@ class regform extends FormBase {
     return 'regform';
   }
 
+  /**
+   * Element specific validation callback.
+   */
+  public function validateLength($element, FormStateInterface $form_state, $form) {
+    $name = $form_state->getValue('full_name');
+    if (strlen($name) < 5) {
+      // Set an error for the form element with a key of "title".
+      $form_state->setError($element, $this->t('Full name must be at least 5 characters long.'));
+    }
+  }
+
+
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['full_name'] = array(
       '#type' => 'textfield',
       '#title' => t('Enter Name:'),
       '#required' => TRUE,
+      '#element_validate' => [[$this, 'validateLength']],
     );
+    $form['nickname'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Enter nickname:'),
+      '#required' => TRUE,
+    );
+    // $form['skip_validation'] = [
+    //   '#type' => 'checkbox',
+    //   '#title' => $this->t('Skip validation'),
+    //   '#description' => $this->t('Allow the use of a title with fewer than 5 characters.'),
+    // ];
     $form['mobile_number'] = array(
       '#type' => 'textfield',
       '#title' => t('Enter Mobile Number:'),
@@ -41,10 +64,16 @@ class regform extends FormBase {
       '#title' => ('Select Gender:'),
       '#options' => array(
         'Male' => t('Male'),
-    'Female' => t('Female'),
+        'Female' => t('Female'),
         'Other' => t('Other'),
       ),
+      '#description' => t('Something')
     );
+    // $form['entityyy'] = array(
+    //   '#type' => 'entity_autocomplete',
+    //   '#title' => t('Select:'),
+    //   '#description' => t('Something')
+    // );
     // $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = array(
       '#type' => 'submit',
@@ -58,6 +87,7 @@ class regform extends FormBase {
     if(strlen($form_state->getValue('mobile_number')) < 8) {
       $form_state->setErrorByName('mobile_number', $this->t('Please enter a valid Mobile Number'));
     }
+    // $form_state->setErrorByName($name, $message)
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
