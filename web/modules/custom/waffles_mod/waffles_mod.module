@@ -1,6 +1,32 @@
 <?php
+use Drupal\Core\Form\FormStateInterface;
 
-/**
- * @file
- * Primary module hooks for waffles module.
- */
+// node-climbing-type-form
+function waffles_mod_form_node_climbing_type_form_alter(&$form, &$form_state, $form_id) {
+  $form['tos'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Terms of service'),
+    '#weight' => -100,
+  ];
+
+  $form['tos']['tos_text'] = [
+    '#markup' => t('Terms of service ... blah blah blah ...'),
+    '#prefix' => '<p>',
+    '#suffix' => '</p>',
+  ];
+
+  $form['tos']['tos_agree'] = [
+    '#type' => 'checkbox',
+    '#title' => t('I agree to the terms of service'),
+  ];
+
+  // Add a validation handler where we'll check the checkbox above.
+  $form['#validate'][] = 'alterform_form_validate';
+}
+
+function alterform_form_validate($form, FormStateInterface $form_state) {
+  $tos_agree = $form_state->getValue('tos_agree');
+  if ($tos_agree !== 1) {
+    $form_state->setErrorByName('tos_agree', t('You must agree to the terms of service to continue.'));
+  }
+}

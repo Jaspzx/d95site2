@@ -102,6 +102,10 @@ class regform extends FormBase {
     //   '#title' => t('Select:'),
     //   '#description' => t('Something')
     // );
+    $form['hidden_field'] = [
+      '#type' => 'hidden',
+      '#value' => 'you can not change me',
+    ];
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = array(
       '#type' => 'submit',
