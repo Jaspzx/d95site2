@@ -21,11 +21,11 @@ third_party_settings:
         layout_settings:
           label: ''
           context_mapping: {  }
-          column_widths: 33-67
+          column_widths: 75-25
         components:
           30d8136a-3cd5-4233-9265-99c1f41805a4:
             uuid: 30d8136a-3cd5-4233-9265-99c1f41805a4
-            region: first
+            region: second
             configuration:
               id: 'field_block:paragraph:deals:field_deal_thumbnail'
               label: 'Deal Thumbnail'
@@ -42,25 +42,9 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          fd816d57-2337-4918-b8fe-e44245946896:
-            uuid: fd816d57-2337-4918-b8fe-e44245946896
-            region: second
-            configuration:
-              id: 'field_block:paragraph:deals:field_deal_by'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
           abe6bb10-9cd9-4279-b475-f5548e5d9dd4:
             uuid: abe6bb10-9cd9-4279-b475-f5548e5d9dd4
-            region: second
+            region: first
             configuration:
               id: 'field_block:paragraph:deals:field_deal_description'
               label: 'Deal Description'

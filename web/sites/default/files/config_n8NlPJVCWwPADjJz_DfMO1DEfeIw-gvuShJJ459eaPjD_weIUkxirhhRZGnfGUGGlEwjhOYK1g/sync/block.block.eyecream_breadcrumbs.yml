@@ -11,7 +11,7 @@ _core:
 id: eyecream_breadcrumbs
 theme: eyecream
 region: primary_menu
-weight: -5
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:
