@@ -2,6 +2,8 @@ uuid: 2108a34a-d49b-431c-9e22-233db55da9c2
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - eyecream
 _core:
@@ -9,7 +11,7 @@ _core:
 id: eyecream_page_title
 theme: eyecream
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/climb-central\r\n/fitbloc\r\n/ccfunan\r\n/ccsportshub"

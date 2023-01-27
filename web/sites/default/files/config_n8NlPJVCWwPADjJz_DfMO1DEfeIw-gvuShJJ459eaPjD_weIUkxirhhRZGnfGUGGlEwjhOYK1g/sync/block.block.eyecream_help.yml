@@ -10,8 +10,8 @@ _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: eyecream_help
 theme: eyecream
-region: primary_menu
-weight: -2
+region: content
+weight: -5
 provider: null
 plugin: help_block
 settings:

@@ -1,6 +1,6 @@
 uuid: 52056de6-e6c5-48d0-ba97-02b48404efcb
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -10,8 +10,8 @@ _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
 id: eyecream_search_form_wide
 theme: eyecream
-region: header
-weight: -5
+region: secondary_menu
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

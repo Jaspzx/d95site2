@@ -8,8 +8,8 @@ _core:
   default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
 id: eyecream_primary_admin_actions
 theme: eyecream
-region: header
-weight: -7
+region: primary_menu
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:
