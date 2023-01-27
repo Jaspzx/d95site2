@@ -85,7 +85,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
 <article{{ attributes.addClass(classes) }}>
   <header class="{{ layout }}">
-    {{ title_prefix }}
+    <!-- {{ title_prefix }} -->
     {% if label and not page %}
     <h2{{ title_attributes.addClass('node__title') }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>

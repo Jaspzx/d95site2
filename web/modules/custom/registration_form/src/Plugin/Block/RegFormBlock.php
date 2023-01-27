@@ -7,18 +7,6 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Form\FormBuilderInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-/**
- * Provides a 'Example: Display a form' block.
- *
- * This example demonstrates the use of the form_builder service, an
- * instance of \Drupal\Core\Form\FormBuilder, in order to retrieve and display
- * a form.
- *
- * @Block(
- *   id = "form_api_example_simple_form_block",
- *   admin_label = @Translation("Example: Display a form")
- * )
- */
 class RegFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**

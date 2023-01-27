@@ -117,7 +117,7 @@ class regform extends FormBase {
     $form['alternate_button'] = [
       '#type' => 'submit',
       '#value' => $this->t('Do alternate thing'),
-      '#disabled' => TRUE,
+      '#disabled' => FALSE,
       // Note that when you specify a submit handler like this only those defined
       // in this array of callbacks will be called. If it's not specified, the default
       // ::submitForm() method will not be called.
@@ -130,7 +130,6 @@ class regform extends FormBase {
     if(strlen($form_state->getValue('mobile_number')) < 8) {
       $form_state->setErrorByName('mobile_number', $this->t('Please enter a valid Mobile Number'));
     }
-    // $form_state->setErrorByName($name, $message)
   }
 
   public function alternateFormSubmit(array &$form, FormStateInterface $form_state) {

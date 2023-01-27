@@ -6,3 +6,10 @@ nav ul {
   padding-top: 1rem;
   list-style-type: none;
 }
+.site-branding__inner{
+  margin: 1.5rem;
+}
+
+#block-eyecream-site-branding{
+  flex-grow: 3;
+}
