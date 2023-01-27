@@ -2,7 +2,7 @@
 use Drupal\Core\Form\FormStateInterface;
 
 // node-climbing-type-form
-function waffles_mod_form_node_climbing_type_form_alter(&$form, &$form_state, $form_id) {
+function waffles_mod_form_node_climbing_type_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $form['tos'] = [
     '#type' => 'fieldset',
     '#title' => t('Terms of service'),
@@ -24,7 +24,7 @@ function waffles_mod_form_node_climbing_type_form_alter(&$form, &$form_state, $f
   $form['#validate'][] = 'alterform_form_validate';
 }
 
-function alterform_form_validate($form, FormStateInterface $form_state) {
+function alterform_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $tos_agree = $form_state->getValue('tos_agree');
   if ($tos_agree !== 1) {
     $form_state->setErrorByName('tos_agree', t('You must agree to the terms of service to continue.'));
