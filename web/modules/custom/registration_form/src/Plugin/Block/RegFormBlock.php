@@ -7,6 +7,12 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Form\FormBuilderInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+/**
+ * @Block(
+ *   id = "registration_form_RegFormBlock",
+ *   admin_label = @Translation("Display Registration Form")
+ * )
+ */
 class RegFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
