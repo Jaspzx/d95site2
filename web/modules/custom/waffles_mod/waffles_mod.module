@@ -30,3 +30,24 @@ function alterform_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $f
     $form_state->setErrorByName('tos_agree', t('You must agree to the terms of service to continue.'));
   }
 }
+
+
+// node_article_form
+function waffles_mod_form_node_article_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['tos'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Terms of service'),
+    '#weight' => -100,
+  ];
+
+  // Add a validation handler where we'll check the checkbox above.
+  // $form['#validate'][] = 'alterform_form_validate';
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function waffles_mod_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  /* Your code here */
+  ksm($form_id);
+}
