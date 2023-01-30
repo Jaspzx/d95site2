@@ -13,3 +13,10 @@ nav ul {
 #block-eyecream-site-branding{
   flex-grow: 3;
 }
+
+.reg {
+  border-radius: 0.5rem;
+  background-color: maroon;
+  color: white;
+  padding: 1rem;
+}

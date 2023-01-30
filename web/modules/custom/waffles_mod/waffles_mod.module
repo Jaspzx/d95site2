@@ -45,9 +45,61 @@ function waffles_mod_form_node_article_form_alter(&$form, \Drupal\Core\Form\Form
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_entity_view().
  */
-function waffles_mod_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function waffles_mod_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
   /* Your code here */
-  ksm($form_id);
+   ksm($entity);
+   //
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    // You can get nid and anything else you need from the node object.
+    $nid = $node->id();
+
+  if ($nid === '42') {
+      $build['reg_box'] = [
+        '#markup' => '<div class="reg"><h3 class="reg">Registration</h3><p>Registrations close 28 Feb 2023!!! Limited Slots available!</p></div>'
+      ];
+      //  $build['reg_box_2'] = [
+      //   '#type' => 'color',
+      //   '#markup' => '<div class="reg"><p>Hello</p></div>'
+      // ];
+      $build['reg_link'] = [
+        '#title' => t('Register Here!'),
+        '#type' => 'link',
+        '#url' => \Drupal\Core\Url::fromRoute('registration_form.registration_form'),
+        '#attributes' => array('class' => array('reg')),
+      ];
+    }
+  }
+
+  // if ($entity->getEntityType()->id() === 'node') {
+  // if ($entity->get('nid') === '42') {
+    // $build['example'] = [
+    //   '#markup' => '<div class="reg_link_box"><h3>Registration</h3><p>Registrations close 28 Feb 2023!!! Limited Slots available!</p></div>',
+    //   // '#description' => 'Registrations close 28 Feb 2023!!! Limited Slots available!',
+    //   // '#attributes' => array('class' => array('reg_link_box')),
+    // ];
+    // $build['reg_link'] = [
+    //   '#title' => t('Register Here!'),
+    //   '#type' => 'link',
+    //   '#url' => \Drupal\Core\Url::fromRoute('registration_form.registration_form'),
+    //   '#attributes' => array('class' => array('reg_link_box')),
+    // ];
+
+    // $regbox = array(
+    //   // '#theme' = 'item_list',
+    //   '#title' => t('Registration'),
+    //   '#items' => array(
+    //     array('#markup' => '<h2 class="reg_link_box">My Sample HTML</h2><p>This is a sentence</p>'),
+    //     array('#title' => t('Register Here!'),
+    //   '#type' => 'link',
+    //   '#url' => \Drupal\Core\Url::fromRoute('registration_form.registration_form'),
+    //   '#attributes' => array('class' => array('reg_link_box')))
+    //   ),
+    //   '#attributes' => array('class' => array('reg_link_box')),
+    // );
+
+    // $build['box'] = $regbox;
+  // }
 }
