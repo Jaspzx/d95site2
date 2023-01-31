@@ -153,3 +153,8 @@ $settings['skip_permissions_hardening'] = TRUE;
  * the language or field module.
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
+#
+if (class_exists('Kint')) {
+  // Change the maximum depth to prevent out-of-memory errors.
+  \Kint::$depth_limit = 3;
+}
