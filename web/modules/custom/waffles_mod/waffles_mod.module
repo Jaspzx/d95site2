@@ -49,14 +49,20 @@ function waffles_mod_form_node_article_form_alter(&$form, \Drupal\Core\Form\Form
  */
 function waffles_mod_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
   /* Your code here */
-   ksm($entity);
-   //
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node instanceof \Drupal\node\NodeInterface) {
-    // You can get nid and anything else you need from the node object.
-    $nid = $node->id();
+   // ksm($entity->id());
 
-    if ($nid === '42') {
+  if ($entity->getType() === 'article'){
+    $build['hello'] = [
+        '#markup' => '<div class=""><h3 class="">HELLEOOO</h3></div>'
+      ];
+   //
+  }
+  // $node = \Drupal::routeMatch()->getParameter('node');
+  // if ($node instanceof \Drupal\node\NodeInterface) {
+  //   // You can get nid and anything else you need from the node object.
+  //   $nid = $node->id();
+
+    if ($entity->id() === '40') {
       $build['reg_box'] = [
         '#markup' => '<div class="reg"><h3 class="reg">Registration</h3><p>Registrations close 28 Feb 2023!!! Limited Slots available!</p></div>'
       ];
@@ -71,7 +77,7 @@ function waffles_mod_node_view(array &$build, \Drupal\Core\Entity\EntityInterfac
         '#attributes' => array('class' => array('reg')),
       ];
     }
-  }
+  // }
 
   // if ($entity->getEntityType()->id() === 'node') {
   // if ($entity->get('nid') === '42') {

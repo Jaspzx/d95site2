@@ -156,5 +156,5 @@ $settings['skip_permissions_hardening'] = TRUE;
 #
 if (class_exists('Kint')) {
   // Change the maximum depth to prevent out-of-memory errors.
-  \Kint::$depth_limit = 3;
+  \Kint::$depth_limit = 4;
 }

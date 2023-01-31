@@ -10,10 +10,16 @@ function eyecream_preprocess_node(&$variables) {
     $variables['current_user_is_owner'] = TRUE;
   }
 
+  // ksm($variables['node']);
 // Preprocess for OUTLET/GYM
   if ($variables['node']->getType() == 'outlet' || $variables['node']->getType() == 'gym') {
     $variables['#attached']['library'][] = 'eyecream/outlet';
   }
+
+  // if ($variables['node']->getType() == 'outlet'){
+  //     // ksm($variables['node']->get('field_tel')->getValue());
+  //     ksm($variables['node']->get('field_tel')->getValue());
+  // }
 }
 
 function eyecream_preprocess_field(&$variables) {
@@ -25,6 +31,9 @@ function eyecream_preprocess_field(&$variables) {
     if ($variables['currentLoad'] > $variables['items'][0]['content']['#markup']){
       $variables['gymFull'] = TRUE;
     }
+
+    // ksm($variables['element']['#object']->get('field_tel')->getValue());
+    $variables['telno'] = $variables['element']['#object']->get('field_tel')->getValue();
   }
 
   if ($variables['element']['#field_name'] == 'field_deal_container') {
