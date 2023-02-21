@@ -36,7 +36,7 @@ function alterform_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $f
 function waffles_mod_form_node_article_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $form['tos'] = [
     '#type' => 'fieldset',
-    '#title' => t('Terms of service'),
+    '#title' => t('Terms of service. HELO'),
     '#weight' => -100
   ];
 
