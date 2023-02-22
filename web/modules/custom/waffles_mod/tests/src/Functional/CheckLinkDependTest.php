@@ -26,6 +26,7 @@ class CheckLinkDependTest extends BrowserTestBase
     $this->placeBlock('system_menu_block:tools');
     $this->contentType = $this->createContentType();
     $this->contentType = $this->createContentType(['type' => 'article']);
+    $this->contentType = $this->createContentType(['type' => 'article']);
 
   }
 
